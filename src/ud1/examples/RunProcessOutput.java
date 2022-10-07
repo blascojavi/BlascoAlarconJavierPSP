@@ -10,7 +10,6 @@ public class RunProcessOutput {
         if(args.length == 0) {
             System.err.println("Cal especificar programa.");
             System.exit(-1);
-
         }
 
         ProcessBuilder pb = new ProcessBuilder(args);
