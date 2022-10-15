@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7b0167b-1808-4529-b0b2-864c3ecfae9f" name="Changes" comment="significatiu">
-      <change afterPath="$PROJECT_DIR$/src/ud1/practices/LessUsedCarProcess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ud1/practices/LessUsedCarProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ud1/practices/LessUsedCarProcess.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,12 +38,26 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Javier Blasco\IdeaProjects\BlascoAlarconJavier-PSP\files" />
       <recent name="C:\Users\Javier Blasco\IdeaProjects\BlascoAlarconJavier-PSP" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TextEditorProcess">
+  <component name="RunManager" selected="Application.LessUsedCarProcess">
     <configuration name="IPAdressProcess" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ud1.practices.IPAdressProcess" />
+      <module name="BlascoAlarconJavier-PSP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ud1.practices.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LessUsedCarProcess" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ud1.practices.LessUsedCarProcess" />
       <module name="BlascoAlarconJavier-PSP" />
       <extension name="coverage">
         <pattern>
@@ -90,6 +105,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LessUsedCarProcess" />
         <item itemvalue="Application.TextEditorProcess" />
         <item itemvalue="Application.IPAdressProcess" />
       </list>
@@ -167,7 +183,21 @@
       <option name="project" value="LOCAL" />
       <updated>1665847088822</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="significatiu">
+      <created>1665847320325</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1665847320325</updated>
+    </task>
+    <task id="LOCAL-00011" summary="significatiu">
+      <created>1665847330856</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1665847330856</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
