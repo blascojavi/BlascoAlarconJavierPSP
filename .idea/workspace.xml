@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c7b0167b-1808-4529-b0b2-864c3ecfae9f" name="Changes" comment="Initial commit">
-      <change beforePath="$PROJECT_DIR$/src/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="c7b0167b-1808-4529-b0b2-864c3ecfae9f" name="Changes" comment="significatiu">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ud1/practices/IPAdressProcess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ud1/examples/RunProcessOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ud1/examples/RunProcessOutput.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +34,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -39,8 +43,21 @@
       <recent name="C:\Users\Javier Blasco\IdeaProjects\BlascoAlarconJavier-PSP" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RunProcessOutput">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.IPAdressProcess">
+    <configuration name="IPAdressProcess" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ud1.practices.IPAdressProcess" />
+      <module name="BlascoAlarconJavier-PSP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ud1.practices.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="BlascoAlarconJavier-PSP" />
       <method v="2">
@@ -63,7 +80,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.IPAdressProcess" />
       </list>
     </recent_temporary>
   </component>
@@ -97,7 +114,28 @@
       <option name="project" value="LOCAL" />
       <updated>1665158206769</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Initial commit">
+      <created>1665158255846</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1665158255846</updated>
+    </task>
+    <task id="LOCAL-00005" summary="commit">
+      <created>1665158446370</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1665158446370</updated>
+    </task>
+    <task id="LOCAL-00006" summary="significatiu">
+      <created>1665158527101</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1665158527101</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -113,6 +151,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="commit" />
+    <MESSAGE value="significatiu" />
+    <option name="LAST_COMMIT_MESSAGE" value="significatiu" />
   </component>
 </project>
