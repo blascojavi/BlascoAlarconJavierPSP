@@ -22,6 +22,9 @@ public class LessUsedCarProcess {
         try {
             //inicia un proceso para PB y crea un pipeline que esta vinculado por los flujos de E/S estandar
             List<Process> proc = ProcessBuilder.startPipeline(programs);
+
+            //programs.wait();
+            //proc.wait();
             //cogémos el último proceso (sería el proceso 1 pero le restamos 1 para cogerlo correctamente)
             Process last = proc.get(proc.size() - 1);
             //Sacamos el resultado del proceso
@@ -33,6 +36,7 @@ public class LessUsedCarProcess {
             System.err.println("Excepció d'E / S.");
             System.out.println(e.getMessage());
             System.exit(-1);
+
         }
 
     }

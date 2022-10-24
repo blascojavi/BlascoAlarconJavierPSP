@@ -23,9 +23,10 @@ public class TextEditorProcess {
 
 
         try {
-            processEscritura.start();
+            Process procesoEscritura = processEscritura.start();
+            procesoEscritura.waitFor();
             Process procesoLectura = processLlectura.start();
-
+            procesoLectura.waitFor();
 
             BufferedReader stdout = new BufferedReader(new InputStreamReader(procesoLectura.getInputStream()));
             System.out.println("L'edició de text ha acabat.");
@@ -38,6 +39,8 @@ public class TextEditorProcess {
             System.err.println("Excepció d'E/S.");
             System.out.println(ex.getMessage());
             System.exit(-1);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
 
 
