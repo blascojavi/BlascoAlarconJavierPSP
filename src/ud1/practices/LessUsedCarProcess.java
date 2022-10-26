@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LessUsedCarProcess {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         //Creamos un arrayList
         ArrayList<ProcessBuilder> programs = new ArrayList<>();
         //llenamos el array con el archivo del concessionari
@@ -27,6 +27,7 @@ public class LessUsedCarProcess {
             //proc.wait();
             //cogémos el último proceso (sería el proceso 1 pero le restamos 1 para cogerlo correctamente)
             Process last = proc.get(proc.size() - 1);
+             last.waitFor();
             //Sacamos el resultado del proceso
             BufferedReader stdout = new BufferedReader(new InputStreamReader(last.getInputStream()));
             //imprimimos el resultado
