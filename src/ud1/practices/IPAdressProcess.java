@@ -17,7 +17,15 @@ public class IPAdressProcess {
         ProcessBuilder process = new ProcessBuilder("wsl.exe", "ip", "-br", "a");
         try {
             Process pr = process.start();
-            pr.waitFor();
+            int returnCode = pr.waitFor();
+
+            if (returnCode == 0) {
+                System.out.println("El resultado ha sido " + returnCode + " Por lo que se ha ejecutado correctamente");
+            }else{
+                System.out.println("El resultado ha sido " + returnCode + " por lo que ha habido un error inesperado");
+
+            }
+
             BufferedReader stdout = new BufferedReader(new InputStreamReader(pr.getInputStream()));
             String line;
 
