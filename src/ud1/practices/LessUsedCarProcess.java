@@ -32,15 +32,18 @@ public class LessUsedCarProcess {
             int returnCode = last.waitFor();
             if (returnCode == 0) {
                 System.out.println("El resultado ha sido " + returnCode + " Por lo que se ha ejecutado correctamente");
+
+                //Sacamos el resultado del proceso
+                BufferedReader stdout = new BufferedReader(new InputStreamReader(last.getInputStream()));
+                //imprimimos el resultado
+                System.out.println("El coche que tiene menos kilometros es: \n" + stdout.readLine());
+
             }else{
                 System.out.println("El resultado ha sido " + returnCode + " por lo que ha habido un error inesperado");
 
             }
 
-            //Sacamos el resultado del proceso
-            BufferedReader stdout = new BufferedReader(new InputStreamReader(last.getInputStream()));
-            //imprimimos el resultado
-            System.out.println("El coche que tiene menos kilometros es: \n" + stdout.readLine());
+
 
         } catch (IOException e) {
             System.err.println("Excepció d'E / S.");

@@ -35,17 +35,19 @@ public class TextEditorProcess {
 
             if (returnCode == 0) {
                 System.out.println("El resultado ha sido " + returnCode + " Por lo que se ha ejecutado correctamente");
+                BufferedReader stdout = new BufferedReader(new InputStreamReader(procesoLectura.getInputStream()));
+                System.out.println("L'edició de text ha acabat.");
+                System.out.println("Contingut del fitxer \"text.txt\":");
+                String line;
+                while ((line = stdout.readLine()) != null)
+                    System.out.printf("\t%s\n", line);
+
             }else{
                 System.out.println("El resultado ha sido " + returnCode + " por lo que ha habido un error inesperado");
 
             }
 
-            BufferedReader stdout = new BufferedReader(new InputStreamReader(procesoLectura.getInputStream()));
-            System.out.println("L'edició de text ha acabat.");
-            System.out.println("Contingut del fitxer \"text.txt\":");
-            String line;
-            while ((line = stdout.readLine()) != null)
-                System.out.printf("\t%s\n", line);
+
 
         } catch (IOException ex) {
             System.err.println("Excepció d'E/S.");
