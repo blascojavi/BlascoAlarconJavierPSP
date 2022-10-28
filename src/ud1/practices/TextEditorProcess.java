@@ -29,12 +29,20 @@ public class TextEditorProcess {
 
             //El proceso actual espera a que el proceso representado por Processtermine. Devuelve el código de salida del proceso.
             //El valor 0 indica una terminación normal.
+                int returnCode1=procesoEscritura.waitFor();
+            if (returnCode1==0){
+                System.out.println("El resultado ha sido " + returnCode1 + " Por lo que se ha ejecutado correctamente el proceso de escritura");
+
+            }else{
+                System.out.println("El resultado ha sido " + returnCode1 + " por lo que ha habido un error inesperado en el proceso de escritura");
+
+            }
 
 
             int returnCode = procesoLectura.waitFor();
 
             if (returnCode == 0) {
-                System.out.println("El resultado ha sido " + returnCode + " Por lo que se ha ejecutado correctamente");
+                System.out.println("El resultado ha sido " + returnCode + " Por lo que se ha ejecutado correctamente el proceso de lectura");
                 BufferedReader stdout = new BufferedReader(new InputStreamReader(procesoLectura.getInputStream()));
                 System.out.println("L'edició de text ha acabat.");
                 System.out.println("Contingut del fitxer \"text.txt\":");
@@ -43,7 +51,7 @@ public class TextEditorProcess {
                     System.out.printf("\t%s\n", line);
 
             }else{
-                System.out.println("El resultado ha sido " + returnCode + " por lo que ha habido un error inesperado");
+                System.out.println("El resultado ha sido " + returnCode + " por lo que ha habido un error inesperado en el proceso de lectura");
 
             }
 
