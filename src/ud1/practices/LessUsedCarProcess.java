@@ -29,7 +29,9 @@ public class LessUsedCarProcess {
             Process last = proc.get(proc.size() - 1);
             //El proceso actual espera a que el proceso representado por Processtermine. Devuelve el código de salida del proceso.
             //El valor 0 indica una terminación normal.
+
             int returnCode = last.waitFor();
+
             if (returnCode == 0) {
                 System.out.println("El resultado ha sido " + returnCode + " Por lo que se ha ejecutado correctamente");
 

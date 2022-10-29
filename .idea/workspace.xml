@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c7b0167b-1808-4529-b0b2-864c3ecfae9f" name="Changes" comment="significatiu&#10;WaitFor() incluido en LessUsedCarProcess, TextEditor e IPProcess">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BlascoAlarconJavier-PSP/ud1/practices/TextEditorProcess.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BlascoAlarconJavier-PSP/ud1/practices/TextEditorProcess.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ud1/practices/TextEditorProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ud1/practices/TextEditorProcess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ud1/practices/LessUsedCarProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ud1/practices/LessUsedCarProcess.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +46,7 @@
       <recent name="C:\Users\Javier Blasco\IdeaProjects\BlascoAlarconJavier-PSP" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TextEditorProcess">
+  <component name="RunManager" selected="Application.LessUsedCarProcess">
     <configuration name="IPAdressProcess" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ud1.practices.IPAdressProcess" />
       <module name="BlascoAlarconJavier-PSP" />
@@ -123,10 +122,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TextEditorProcess" />
-        <item itemvalue="Application.pruebaQuique" />
         <item itemvalue="Application.LessUsedCarProcess" />
         <item itemvalue="Application.IPAdressProcess" />
+        <item itemvalue="Application.TextEditorProcess" />
+        <item itemvalue="Application.pruebaQuique" />
       </list>
     </recent_temporary>
   </component>
@@ -335,7 +334,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666971458347</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="significatiu&#10;WaitFor() incluido en LessUsedCarProcess, TextEditor e IPProcess">
+      <created>1666971771035</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1666971771035</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
