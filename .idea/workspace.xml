@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7b0167b-1808-4529-b0b2-864c3ecfae9f" name="Changes" comment="significatiu&#10;WaitFor() incluido en LessUsedCarProcess, TextEditor e IPProcess">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ud1/practices/LessUsedCarProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ud1/practices/LessUsedCarProcess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ud1/practices/TextEditorProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ud1/practices/TextEditorProcess.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -341,7 +340,28 @@
       <option name="project" value="LOCAL" />
       <updated>1666971771035</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="significatiu&#10;WaitFor() incluido en LessUsedCarProcess, TextEditor e IPProcess">
+      <created>1667077907375</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1667077907375</updated>
+    </task>
+    <task id="LOCAL-00031" summary="significatiu&#10;WaitFor() incluido en LessUsedCarProcess, TextEditor e IPProcess">
+      <created>1667078158746</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1667078158746</updated>
+    </task>
+    <task id="LOCAL-00032" summary="significatiu&#10;WaitFor() incluido en LessUsedCarProcess, TextEditor e IPProcess">
+      <created>1667149545036</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1667149545036</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
