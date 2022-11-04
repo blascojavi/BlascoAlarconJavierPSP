@@ -43,6 +43,25 @@ public class ManagerTasks {
 
         // TODO: Start all the teams and wait for them to finish their tasks
 
+
+        try {
+            //Lanzamos los procesos
+            frontendManager.start();
+            backendManager.start();
+            databaseManager.start();
+
+            //Espera a que termine el hilo en ejecucion para continuar
+            frontendManager.join();
+            backendManager.join();
+            databaseManager.join();
+
+
+
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+
         System.out.println("Projecte acabat! Tots els equips han acabat les tasques assignades.");
     }
 }

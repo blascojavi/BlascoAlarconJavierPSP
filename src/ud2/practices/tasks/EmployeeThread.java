@@ -25,7 +25,10 @@ public class EmployeeThread extends Thread{
     @Override
     public void run() {
         // TODO: Do all the assigned tasks
+        for (Task tarea : getTasks()) {
+            tarea.work();
 
+        }
         System.out.printf("%s: Ha realitzat totes les tasques assignades.\n", this.getName());
     }
 }

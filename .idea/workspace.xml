@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7b0167b-1808-4529-b0b2-864c3ecfae9f" name="Changes" comment="significatiu&#10;creacion package ud2">
-      <change afterPath="$PROJECT_DIR$/files/ud2/data_matrix.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/practices/summatrix/SumIntegerListThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/practices/summatrix/SumMatrixThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/practices/tasks/EmployeeThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/practices/tasks/ManagerTasks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/practices/tasks/ManagerThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/practices/tasks/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/practices/tasks/Team.java" afterDir="false" />
+    <list default="true" id="c7b0167b-1808-4529-b0b2-864c3ecfae9f" name="Changes" comment="significatiu&#10;creacio package ud2 y començament dels exercicis">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BlascoAlarconJavier-PSP/ud1/practices/LessUsedCarProcess.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BlascoAlarconJavier-PSP/ud1/practices/LessUsedCarProcess.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ud2/practices/tasks/EmployeeThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ud2/practices/tasks/EmployeeThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ud2/practices/tasks/ManagerTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ud2/practices/tasks/ManagerTasks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ud2/practices/tasks/ManagerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ud2/practices/tasks/ManagerThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ud2/practices/tasks/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ud2/practices/tasks/Task.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -403,7 +398,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667150329367</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="significatiu&#10;creacio package ud2 y començament dels exercicis">
+      <created>1667601877223</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1667601877223</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -425,6 +427,7 @@
     <MESSAGE value="significatiu&#10;WaitFor() incluido en TextEditor e IPProcess" />
     <MESSAGE value="significatiu&#10;WaitFor() incluido en LessUsedCarProcess, TextEditor e IPProcess" />
     <MESSAGE value="significatiu&#10;creacion package ud2" />
-    <option name="LAST_COMMIT_MESSAGE" value="significatiu&#10;creacion package ud2" />
+    <MESSAGE value="significatiu&#10;creacio package ud2 y començament dels exercicis" />
+    <option name="LAST_COMMIT_MESSAGE" value="significatiu&#10;creacio package ud2 y començament dels exercicis" />
   </component>
 </project>
