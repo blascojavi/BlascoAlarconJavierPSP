@@ -13,10 +13,10 @@ public class ManagerThread extends Thread{
     public void run() {
         // TODO: Make all your assigned employees do their tasks
 
-        for (EmployeeThread empleado: team.getEmployees()) {
+        for (EmployeeThread empleado: team.getEmployees()) {//Recorre los empleados de cada equipo
             empleado.start();//lanza el hilo
         }
-        for (EmployeeThread empleado: team.getEmployees()) {
+        for (EmployeeThread empleado: team.getEmployees()) {//Recorre los empleados de cada equipo
             try {
                 empleado.join();//Espera a que termine
             } catch (InterruptedException e) {
