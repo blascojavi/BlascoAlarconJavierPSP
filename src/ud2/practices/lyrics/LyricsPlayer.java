@@ -17,8 +17,10 @@ public class LyricsPlayer {
         end = false;
     }
 
-    public int addLine(String line){
+    public synchronized int addLine(String line){
         lines.add(line);
+        notifyAll();
+
         return lines.size() - 1;
     }
 
@@ -30,12 +32,16 @@ public class LyricsPlayer {
     }
 
     public boolean isLineAvailable(int i){
-        return i < lines.size();
+        return lines.size() < i;
+        //return i < lines.size();
 
     }
 
-    public void playLine(int i) throws InterruptedException {
+    public synchronized void playLine(int i) throws InterruptedException {
         String[] line;
+        if (!isLineAvailable((i))){
+            wait();
+        }
         line = lines.get(i).split(" ");
 
         for (int j = 0; j < line.length; j++) {
@@ -72,4 +78,5 @@ public class LyricsPlayer {
             throw new RuntimeException(e);
         }
     }
+
 }

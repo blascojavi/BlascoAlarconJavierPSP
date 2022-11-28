@@ -4,46 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7b0167b-1808-4529-b0b2-864c3ecfae9f" name="Changes" comment="significatiu&#10;ajuste">
-      <change afterPath="$PROJECT_DIR$/files/ud2/lyrics.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/examples/CopyShop/CopyShop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/examples/CopyShop/CustomerThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/examples/CopyShop/Document.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/examples/CopyShop/Printer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/examples/PitStop/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/examples/PitStop/Mechanic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/examples/PitStop/PitStop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/examples/PitStop/RaiseMechanic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/examples/PitStop/Tire.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/examples/PitStop/TireMechanic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/examples/bizum/BankAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/examples/bizum/Bizums.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/examples/bizum/NotEnoughMoneyException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/examples/bizum/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/examples/fire/ExtinguishFire.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/examples/fire/Fire.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/examples/fire/Helicopter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/examples/fire/Pool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/examples/fire/Worker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/examples/join/PowerThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/examples/join/RunPowerThreads.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/examples/runnable/HelloRunnable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/examples/runnable/StartRunnables.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/examples/thread/HelloThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/examples/thread/StartThreads.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/examples/varios/dormirUnHilo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/examples/varios/esperarA_UnHilo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/practices/collectivetasks/CollectiveTasks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/practices/collectivetasks/EmployeeThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/practices/collectivetasks/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/practices/collectivetasks/TaskStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/practices/collectivetasks/Team.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/practices/lyrics/Loader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/practices/lyrics/LyricsPlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/practices/lyrics/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/practices/swimmingpool/PersonThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/practices/swimmingpool/SwimmingPool.java" afterDir="false" />
+    <list default="true" id="c7b0167b-1808-4529-b0b2-864c3ecfae9f" name="Changes" comment="Exersisi 1 y 2 de PracticeSynchronized">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ud2/practices/lyrics/LyricsPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ud2/practices/lyrics/LyricsPlayer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +60,7 @@
       <recent name="C:\Users\Javier Blasco\IdeaProjects\BlascoAlarconJavier-PSP" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SwimmingPool">
+  <component name="RunManager" selected="Application.LyricsPlayer">
     <configuration name="CollectiveTasks" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ud2.practices.collectivetasks.CollectiveTasks" />
       <module name="BlascoAlarconJavier-PSP" />
@@ -186,9 +149,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LyricsPlayer" />
         <item itemvalue="Application.SwimmingPool" />
         <item itemvalue="Application.CollectiveTasks" />
-        <item itemvalue="Application.LyricsPlayer" />
         <item itemvalue="Application.ManagerTasks" />
         <item itemvalue="Application.ExtinguishFire" />
       </list>
@@ -470,7 +433,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667634792173</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Exersisi 1 y 2 de PracticeSynchronized">
+      <created>1669574685914</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1669574685914</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Exersisi 1 y 2 de PracticeSynchronized">
+      <created>1669574695182</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1669574695182</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -498,6 +475,7 @@
     <MESSAGE value="significatiu&#10;creacio package ud2 y començament dels exercicis" />
     <MESSAGE value="significatiu&#10;Summatrix i tasks pujats" />
     <MESSAGE value="significatiu&#10;ajuste" />
-    <option name="LAST_COMMIT_MESSAGE" value="significatiu&#10;ajuste" />
+    <MESSAGE value="Exersisi 1 y 2 de PracticeSynchronized" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exersisi 1 y 2 de PracticeSynchronized" />
   </component>
 </project>
