@@ -6,9 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="c7b0167b-1808-4529-b0b2-864c3ecfae9f" name="Changes" comment="PracticeSynchronized">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BlascoAlarconJavier-PSP/ud2/practices/lyrics/LyricsPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BlascoAlarconJavier-PSP/ud2/practices/lyrics/LyricsPlayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BlascoAlarconJavier-PSP/ud2/practices/swimmingpool/SwimmingPool.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BlascoAlarconJavier-PSP/ud2/practices/swimmingpool/SwimmingPool.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ud2/practices/swimmingpool/SwimmingPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ud2/practices/swimmingpool/SwimmingPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BlascoAlarconJavier-PSP/ud2/practices/collectivetasks/CollectiveTasks.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BlascoAlarconJavier-PSP/ud2/practices/collectivetasks/CollectiveTasks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BlascoAlarconJavier-PSP/ud2/practices/collectivetasks/EmployeeThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BlascoAlarconJavier-PSP/ud2/practices/collectivetasks/EmployeeThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BlascoAlarconJavier-PSP/ud2/practices/collectivetasks/Team.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BlascoAlarconJavier-PSP/ud2/practices/collectivetasks/Team.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ud2/practices/collectivetasks/CollectiveTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ud2/practices/collectivetasks/CollectiveTasks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ud2/practices/collectivetasks/EmployeeThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ud2/practices/collectivetasks/EmployeeThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ud2/practices/collectivetasks/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ud2/practices/collectivetasks/Team.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +65,7 @@
       <recent name="C:\Users\Javier Blasco\IdeaProjects\BlascoAlarconJavier-PSP" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SwimmingPool">
+  <component name="RunManager" selected="Application.CollectiveTasks">
     <configuration name="CollectiveTasks" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ud2.practices.collectivetasks.CollectiveTasks" />
       <module name="BlascoAlarconJavier-PSP" />
@@ -151,9 +154,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CollectiveTasks" />
         <item itemvalue="Application.SwimmingPool" />
         <item itemvalue="Application.LyricsPlayer" />
-        <item itemvalue="Application.CollectiveTasks" />
         <item itemvalue="Application.ManagerTasks" />
         <item itemvalue="Application.ExtinguishFire" />
       </list>
@@ -456,7 +459,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669670585958</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="PracticeSynchronized">
+      <created>1669671272991</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1669671272991</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

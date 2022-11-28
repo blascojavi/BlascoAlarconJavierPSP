@@ -50,28 +50,28 @@ public class CollectiveTasks {
             //frontend.getNextTask();
             //System.out.println(e.team.getName());
         }
-        /*
+
         for (EmployeeThread e: backend.getEmployees()){
             e.start();
         }
         for (EmployeeThread e: database.getEmployees()){
             e.start();
         }
-        */
+
         try{
             for (EmployeeThread e: frontend.getEmployees()){
                 e.join();
                 //e.team.removeTask(e.team.getNextTask().getName(),e.team.getNextTask().getDuration());
 
             }
-            /*
+
             for (EmployeeThread e: backend.getEmployees()){
                 e.join();
             }
             for (EmployeeThread e: database.getEmployees()){
                 e.join();
             }
-             */
+
 
         }catch (InterruptedException e) {
             throw new RuntimeException(e);

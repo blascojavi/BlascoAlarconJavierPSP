@@ -28,6 +28,7 @@ public class Team {
 
 
     public List<EmployeeThread> getEmployees() {
+
         return employees;
     }
 
@@ -46,7 +47,15 @@ public class Team {
          * The task must be deleted from the list when retrieved.
          * If all Tasks are done and tested, return null.
          */
-
+        if (unfinishedTasks.size() !=0) {
+            return unfinishedTasks.remove(0);
+        }
+        if (testingTasks.size() != 0){
+            return testingTasks.remove(0);
+        }
+        return null;
+    }
+/*
         if (unfinishedTasks.size() >0){
             for (Task t: unfinishedTasks){
 
@@ -56,7 +65,7 @@ public class Team {
                 //unfinishedTasks.remove(new Task(t.getName(), t.getDuration()));
                 return t;
             }
-        }else if (unfinishedTasks.size()==0 && testingTasks.size()>0){
+        }else if ( testingTasks.size()>0){
             for (Task t: testingTasks){
                 return t;
             }
@@ -66,7 +75,7 @@ public class Team {
 
     }
 
-
+ */
     public void addTestingTask(Task t){
         testingTasks.add(t);
     }

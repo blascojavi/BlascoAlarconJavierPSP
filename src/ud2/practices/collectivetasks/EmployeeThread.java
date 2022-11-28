@@ -34,7 +34,7 @@ public class EmployeeThread extends Thread{
         //============================
 
        // int numTareas = team. team.getEmployees().size();
-
+/*
         for (int i=0; i < 2 ; i++){
 
             Task tk = team.getNextTask();
@@ -44,22 +44,27 @@ public class EmployeeThread extends Thread{
                 //Task t= team.getNextTask();
                 if (tk.status()==TaskStatus.UNFINISHED){
                     tk.work();
-
+                    team.addTestingTask(tk);
                     tk.test();
-                    //team.addFinishedTask(t);
 
-                    //t.setStatus(TaskStatus.TESTING);
-
-                    //System.out.println(t.toString());
-                    //team.removeTask(team.getNextTask().getName(),team.getNextTask().getDuration());
-
-                    //System.out.println(current.toString());
-                    //team.removeTask(team.getNextTask().getName(),team.getNextTask().getDuration());
 
                 } else if (tk.status() == TaskStatus.TESTING) {
                     tk.test();
+                    team.addFinishedTask(tk);
                 }
             }
+        }
+*/
+        Task tk;
+        while ((tk=team.getNextTask()) != null) {
+            if (tk.status() == TaskStatus.UNFINISHED) {
+                tk.work();
+                team.addTestingTask(tk);
+            }else if (tk.status() == TaskStatus.TESTING) {
+                tk.test();
+                team.addFinishedTask(tk);
+            }
+
         }
 
 
