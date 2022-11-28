@@ -34,7 +34,6 @@ public class SwimmingPool {
     public static void main(String[] args) {
 
         SwimmingPool pool = new SwimmingPool(10, 3);
-        // ArrayList<PersonThread> poolList = new ArrayList<>();
         String[] names = {
                 "Andrès", "Àngel", "Anna", "Carles", "Enric",
                 "Helena", "Isabel", "Joan", "Lorena", "Mar",
@@ -42,7 +41,6 @@ public class SwimmingPool {
                 "Paula", "Pere", "Teresa", "Toni", "Vicent"
         };
         List<PersonThread> persons = new ArrayList<>();
-        //Thread current = Thread.currentThread();
         for(String name : names) {
             // TODO: Create the threads and start them
             PersonThread pt = new PersonThread(name, pool);
