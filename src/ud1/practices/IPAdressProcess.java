@@ -35,7 +35,7 @@ public class IPAdressProcess {
                 String line;
 
 
-                while ((line = stdout.readLine()) != null) {
+                while (( line= stdout.readLine()) != null) {
                     System.out.println("La direcció IP del dispositiu és : " + line);
 
                     //  if (line.startsWith("eth0")) {

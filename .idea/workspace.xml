@@ -5,13 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7b0167b-1808-4529-b0b2-864c3ecfae9f" name="Changes" comment="PracticeSynchronized">
+      <change afterPath="$PROJECT_DIR$/files/ud1/exam1_text1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/ud1/exam1_text2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ud2/exams/TwoEditors/TwoEditorsProcess.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ud2/exams/concert/BuyConcertTickets.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ud2/exams/concert/BuyerThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ud2/exams/concert/TicketWebsite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ud2/exams/sushi/Sushi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ud2/exams/sushi/SushiRestaurant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ud2/exams/sushi/Waiter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BlascoAlarconJavier-PSP/ud2/practices/collectivetasks/CollectiveTasks.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BlascoAlarconJavier-PSP/ud2/practices/collectivetasks/CollectiveTasks.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BlascoAlarconJavier-PSP/ud2/practices/collectivetasks/EmployeeThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BlascoAlarconJavier-PSP/ud2/practices/collectivetasks/EmployeeThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BlascoAlarconJavier-PSP/ud2/practices/collectivetasks/Team.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BlascoAlarconJavier-PSP/ud2/practices/collectivetasks/Team.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ud2/practices/collectivetasks/CollectiveTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ud2/practices/collectivetasks/CollectiveTasks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ud2/practices/collectivetasks/EmployeeThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ud2/practices/collectivetasks/EmployeeThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ud2/practices/collectivetasks/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ud2/practices/collectivetasks/Team.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ud1/practices/IPAdressProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ud1/practices/IPAdressProcess.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,13 +69,13 @@
       <recent name="C:\Users\Javier Blasco\IdeaProjects\BlascoAlarconJavier-PSP" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CollectiveTasks">
-    <configuration name="CollectiveTasks" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ud2.practices.collectivetasks.CollectiveTasks" />
+  <component name="RunManager" selected="Application.BuyConcertTickets">
+    <configuration name="BuyConcertTickets" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ud2.exams.concert.BuyConcertTickets" />
       <module name="BlascoAlarconJavier-PSP" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ud2.practices.collectivetasks.*" />
+          <option name="PATTERN" value="ud2.exams.concert.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -79,25 +83,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExtinguishFire" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ud2.examples.fire.ExtinguishFire" />
+    <configuration name="IPAdressProcess" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ud1.practices.IPAdressProcess" />
       <module name="BlascoAlarconJavier-PSP" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ud2.examples.fire.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LyricsPlayer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ud2.practices.lyrics.LyricsPlayer" />
-      <module name="BlascoAlarconJavier-PSP" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ud2.practices.lyrics.*" />
+          <option name="PATTERN" value="ud1.practices.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -108,19 +99,6 @@
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="BlascoAlarconJavier-PSP" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ManagerTasks" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ud2.practices.tasks.ManagerTasks" />
-      <module name="BlascoAlarconJavier-PSP" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ud2.practices.tasks.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -139,12 +117,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SwimmingPool" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ud2.practices.swimmingpool.SwimmingPool" />
+    <configuration name="Sushi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ud2.exams.sushi.Sushi" />
       <module name="BlascoAlarconJavier-PSP" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ud2.practices.swimmingpool.*" />
+          <option name="PATTERN" value="ud2.exams.sushi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TextEditorProcess" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ud1.practices.TextEditorProcess" />
+      <module name="BlascoAlarconJavier-PSP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ud1.practices.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TwoEditorsProcess" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ud2.exams.TwoEditors.TwoEditorsProcess" />
+      <module name="BlascoAlarconJavier-PSP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ud2.exams.TwoEditors.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -154,11 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CollectiveTasks" />
-        <item itemvalue="Application.SwimmingPool" />
-        <item itemvalue="Application.LyricsPlayer" />
-        <item itemvalue="Application.ManagerTasks" />
-        <item itemvalue="Application.ExtinguishFire" />
+        <item itemvalue="Application.BuyConcertTickets" />
+        <item itemvalue="Application.Sushi" />
+        <item itemvalue="Application.TwoEditorsProcess" />
+        <item itemvalue="Application.IPAdressProcess" />
+        <item itemvalue="Application.TextEditorProcess" />
       </list>
     </recent_temporary>
   </component>
@@ -466,7 +470,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669671272991</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="PracticeSynchronized">
+      <created>1669672836429</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1669672836429</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
