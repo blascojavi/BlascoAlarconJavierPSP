@@ -4,18 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7b0167b-1808-4529-b0b2-864c3ecfae9f" name="Changes" comment="PracticeSynchronized">
-      <change afterPath="$PROJECT_DIR$/files/ud1/exam1_text1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/ud1/exam1_text2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/exams/TwoEditors/TwoEditorsProcess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/exams/concert/BuyConcertTickets.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/exams/concert/BuyerThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/exams/concert/TicketWebsite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/exams/sushi/Sushi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/exams/sushi/SushiRestaurant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud2/exams/sushi/Waiter.java" afterDir="false" />
+    <list default="true" id="c7b0167b-1808-4529-b0b2-864c3ecfae9f" name="Changes" comment="Exam1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ud1/practices/IPAdressProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ud1/practices/IPAdressProcess.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +59,7 @@
       <recent name="C:\Users\Javier Blasco\IdeaProjects\BlascoAlarconJavier-PSP" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BuyConcertTickets">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="BuyConcertTickets" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ud2.exams.concert.BuyConcertTickets" />
       <module name="BlascoAlarconJavier-PSP" />
@@ -156,15 +146,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.BuyConcertTickets" />
-        <item itemvalue="Application.Sushi" />
-        <item itemvalue="Application.TwoEditorsProcess" />
-        <item itemvalue="Application.IPAdressProcess" />
-        <item itemvalue="Application.TextEditorProcess" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -175,6 +156,7 @@
       <option name="presentableId" value="Default" />
       <updated>1665157641341</updated>
       <workItem from="1669459243542" duration="323000" />
+      <workItem from="1672267328061" duration="67000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1665158052840</created>
@@ -477,7 +459,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669672836429</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Exam1">
+      <created>1669740884769</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1669740884769</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Exam1">
+      <created>1669740889756</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1669740889756</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -507,6 +503,7 @@
     <MESSAGE value="significatiu&#10;ajuste" />
     <MESSAGE value="Exersisi 1 y 2 de PracticeSynchronized" />
     <MESSAGE value="PracticeSynchronized" />
-    <option name="LAST_COMMIT_MESSAGE" value="PracticeSynchronized" />
+    <MESSAGE value="Exam1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exam1" />
   </component>
 </project>
