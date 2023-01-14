@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7b0167b-1808-4529-b0b2-864c3ecfae9f" name="Changes" comment="ud3">
+      <change afterPath="$PROJECT_DIR$/files/ud3/serverLog.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/files/ud2/lyrics.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/ud2/lyrics.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ud3/practices/lyrics/client/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ud3/practices/lyrics/client/Loader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ud3/practices/lyrics/client/LyricsPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ud3/practices/lyrics/client/LyricsPlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ud3/practices/lyrics/server/LyrycsServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ud3/practices/lyrics/server/LyrycsServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,11 +61,11 @@
       <recent name="C:\Users\blasc\OneDrive\Javi\2 DAM\Procesos y servicios\UD1\BlascoAlarconJavier-PSP\files\ud3" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\blasc\OneDrive\Javi\2 DAM\Procesos y servicios\UD1\BlascoAlarconJavier-PSP\files\ud3" />
       <recent name="C:\Users\blasc\OneDrive\Javi\2 DAM\Procesos y servicios\UD1\BlascoAlarconJavier-PSP\files" />
       <recent name="C:\Users\blasc\OneDrive\Javi\2 DAM\Procesos y servicios\UD1\BlascoAlarconJavier-PSP\src\ud3\exercises\chat\client" />
       <recent name="C:\Users\blasc\OneDrive\Javi\2 DAM\Procesos y servicios\UD1\BlascoAlarconJavier-PSP\src\ud2\practices\tasks" />
       <recent name="C:\Users\blasc\OneDrive\Javi\2 DAM\Procesos y servicios\UD1\BlascoAlarconJavier-PSP\files\ud2" />
-      <recent name="C:\Users\Javier Blasco\IdeaProjects\BlascoAlarconJavier-PSP\files" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ud3.practices.lyrics.client" />
@@ -511,7 +510,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673456059988</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="ud3">
+      <created>1673693295508</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1673693295508</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
