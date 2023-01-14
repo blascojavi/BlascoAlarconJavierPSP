@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7b0167b-1808-4529-b0b2-864c3ecfae9f" name="Changes" comment="ud3">
-      <change afterPath="$PROJECT_DIR$/files/ud3/serverLog.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/ud2/lyrics.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/ud2/lyrics.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ud3/practices/lyrics/server/LyrycsServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ud3/practices/lyrics/server/LyrycsServer.java" afterDir="false" />
-    </list>
+    <list default="true" id="c7b0167b-1808-4529-b0b2-864c3ecfae9f" name="Changes" comment="ud3" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -517,7 +512,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673693295508</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="ud3">
+      <created>1673735644781</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1673735644781</updated>
+    </task>
+    <task id="LOCAL-00049" summary="ud3">
+      <created>1673735882013</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1673735882013</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
