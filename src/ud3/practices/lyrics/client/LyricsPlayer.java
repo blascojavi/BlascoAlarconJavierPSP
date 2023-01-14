@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LyricsPlayer {
+    public static boolean sinLinea = true;
+
     Player player;
     Loader loader;
     List<String> lines;
@@ -49,6 +51,7 @@ public class LyricsPlayer {
             System.out.println();
         }catch (InterruptedException e) {
             System.out.println("Conexión cerrada.");
+            sinLinea = false;
 
         }
     }

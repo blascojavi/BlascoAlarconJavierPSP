@@ -5,29 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7b0167b-1808-4529-b0b2-864c3ecfae9f" name="Changes" comment="ud3">
-      <change afterPath="$PROJECT_DIR$/files/ud3/lyrics.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud3/examples/cinema/client/CinemaClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud3/examples/cinema/models/Film.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud3/examples/cinema/models/Request.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud3/examples/cinema/models/RequestType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud3/examples/cinema/server/CinemaServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud3/examples/cinema/server/HandleClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud3/examples/multiClient/client/MultiClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud3/examples/multiClient/server/HandleClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud3/examples/multiClient/server/MulticlientServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud3/examples/multiClient/server/StartMulticlientServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud3/exercises/chat/client/ChatClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud3/exercises/chat/client/ChatListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud3/exercises/chat/servidor/ChatServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud3/exercises/chat/servidor/HandleClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud3/exercises/creacioSockets/CreateClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud3/exercises/creacioSockets/CreateServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud3/practices/lyrics/client/Loader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud3/practices/lyrics/client/LyricsPlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud3/practices/lyrics/client/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud3/practices/lyrics/server/HandleClientLyrics.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud3/practices/lyrics/server/LyrycsServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/ud2/lyrics.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/ud2/lyrics.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ud3/practices/lyrics/client/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ud3/practices/lyrics/client/Loader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ud3/practices/lyrics/client/LyricsPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ud3/practices/lyrics/client/LyricsPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ud3/practices/lyrics/server/LyrycsServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ud3/practices/lyrics/server/LyrycsServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,23 +38,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/blasc/OneDrive/Javi/2 DAM/Procesos y servicios/UD1/BlascoAlarconJavier-PSP/src/ud3/practices/lyrics",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/blasc/OneDrive/Javi/2 DAM/Procesos y servicios/UD1/BlascoAlarconJavier-PSP/src/ud3/practices/lyrics&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\blasc\OneDrive\Javi\2 DAM\Procesos y servicios\UD1\BlascoAlarconJavier-PSP\src\ud3\practices\lyrics" />

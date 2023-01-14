@@ -22,8 +22,8 @@ public class Loader extends Thread {
         try {
             socket = new Socket(ip, port);
             System.out.println("Cliente conectado");
-            try (BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
-                BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            try (BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
+                //BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                 PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
                 int i = 0;
                 boolean terminar = false;
@@ -47,7 +47,9 @@ public class Loader extends Thread {
                         this.lyricsPlayer.addLine(line);
                     }
                 }
+                //Este error deberia estar en el servidor,no en el loader
                 System.out.println("ERROR: La línia " + (i + 1) + " solicitada no existeix.");
+
                 // Cierra la conexión con el servidor
                 this.lyricsPlayer.setEnd(true);
                 socket.close();
