@@ -2,12 +2,17 @@ package ud4.practices.cinema.server;
 
 import ud4.practices.cinema.models.Film;
 
+import javax.net.ssl.SSLServerSocketFactory;
+import javax.net.ssl.SSLSocket;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.security.KeyStore;
 import java.util.ArrayList;
+import java.util.Enumeration;
 import java.util.List;
-
+//keytool -genkey -keyalg RSA -alias cine-server -keypass CinemaServer -keystore cinema-server.jks -storepass password -validity 360 -keysize 2048
 /**
  * CinemaServer és un servidor TCP/IP que gestiona pel·lícules.
  * <p>
@@ -28,12 +33,39 @@ public class CinemaServer {
      * @param port Port on escoltarà el servidor
      * @throws IOException Excepcions del constructor ServerSocket
      */
-    public CinemaServer(int port) throws IOException {
-        server = new ServerSocket(port);
+    public CinemaServer(int port) throws Exception {
+        System.setProperty("javax.net.ssl.keyStore", "files/ud4/cine/cinema-server.jks");
+        System.setProperty("javax.net.ssl.keyStorePassword", "password");
+
+
+        SSLServerSocketFactory sslserversocketfactory = (SSLServerSocketFactory) SSLServerSocketFactory.getDefault();
+        server = sslserversocketfactory.createServerSocket(port);
+
+        printJKSData();
+
+        //server = new ServerSocket(port);
         clients = new ArrayList<>();
         films = new ArrayList<>();
         running = true;
     }
+
+    public void printJKSData() throws Exception {
+        KeyStore keyStore = KeyStore.getInstance("JKS");
+        char[] password = "password".toCharArray();
+        try (FileInputStream inputStream = new FileInputStream("files/ud4/cine/cinema-server.jks")) {
+            keyStore.load(inputStream, password);
+            Enumeration<String> aliases = keyStore.aliases();
+            while (aliases.hasMoreElements()) {
+                String alias = aliases.nextElement();
+                System.out.println("Alias: " + alias);
+                System.out.println("Certificate: " + keyStore.getCertificate(alias));
+            }
+        }
+    }
+
+
+
+
 
     /**
      * Afig una pel·licula al servidor.
@@ -84,7 +116,8 @@ public class CinemaServer {
         while (running){
             try {
                 // Escolta i esperà una nova connexió.
-                Socket client = server.accept();
+                //Socket client = server.accept();
+                SSLSocket client = (SSLSocket) server.accept();
                 // Quan un client es connecta, es crea un objecte HandleClient que
                 // gestionarà la comunicació amb el client connectat.
                 System.out.println("Nou client acceptat.");
@@ -108,6 +141,8 @@ public class CinemaServer {
             CinemaServer server = new CinemaServer(1234);
             server.run();
         } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }

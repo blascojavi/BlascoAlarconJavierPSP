@@ -4,17 +4,28 @@ import ud4.practices.cinema.models.Film;
 import ud4.practices.cinema.models.Request;
 import ud4.practices.cinema.models.RequestType;
 
+import javax.net.ssl.SSLSocket;
+import javax.net.ssl.SSLSocketFactory;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
+import java.security.KeyStore;
+import java.util.Enumeration;
 import java.util.Scanner;
+
+//keytool -import -alias server -keystore client_truststore.jks -file server.crt -storepass 123456
+
+//keytool -genkey -keyalg RSA -alias cine-server -keypass CinemaServer -keystore cinema-server.jks -storepass password -validity 360 -keysize 2048
+
 
 /**
  * Client que es connecta a un CinemaServer
  * i permet realitzar les accions de afegir o obtenir
  * pel·lícules del servidor
  */
+
 public class CinemaClient {
     /**
      * Socket que permet connectar-se amb el servidor
@@ -40,12 +51,37 @@ public class CinemaClient {
      * @param port Port on escolta el servidor
      * @throws IOException Llançada si hi ha algun error connectant-se al servidor.
      */
-    public CinemaClient(String host, int port) throws IOException {
+    public CinemaClient(String host, int port) throws Exception {
         this.scanner = new Scanner(System.in);
-        this.socket = new Socket(host, port);
+        //this.socket = new Socket(host, port);
+
+        String keyStorePassword = System.getenv("CinemaServer");
+        System.setProperty("javax.net.ssl.trustStore", "files/ud4/cine/cinema-client.jks");
+        System.setProperty("javax.net.ssl.trustStorePassword", "password");
+        SSLSocketFactory sslsocketfactory = (SSLSocketFactory) SSLSocketFactory.getDefault();
+        this.socket = sslsocketfactory.createSocket(host, port);
+        printJKSData();
+
         this.objOut = new ObjectOutputStream(socket.getOutputStream());
         this.objIn = new ObjectInputStream(socket.getInputStream());
     }
+
+
+    public void printJKSData() throws Exception {
+        KeyStore keyStore = KeyStore.getInstance("JKS");
+        char[] password = "password".toCharArray();
+        try (FileInputStream inputStream = new FileInputStream("files/ud4/cine/cinema-server.jks")) {
+            keyStore.load(inputStream, password);
+            Enumeration<String> aliases = keyStore.aliases();
+            while (aliases.hasMoreElements()) {
+                String alias = aliases.nextElement();
+                System.out.println("Alias: " + alias);
+                System.out.println("Certificate: " + keyStore.getCertificate(alias));
+            }
+        }
+    }
+
+
 
     /**
      * Envia una pel·licula al servidor
@@ -192,6 +228,8 @@ public class CinemaClient {
             cinema.menu();
         } catch (IOException e){
             System.err.println("Error connectant-se amb el servidor.");
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
     }
 }

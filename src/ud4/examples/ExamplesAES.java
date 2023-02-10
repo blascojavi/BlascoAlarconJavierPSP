@@ -14,6 +14,78 @@ import java.util.Base64;
 
 public class ExamplesAES {
 
+//    public static void main(String[] args) {
+//
+//        String password = "veryDifficultPassword";
+//        SecretKey key = passwordKeyGeneration(password, 256);
+//
+//
+//        writeEncryptedStringToFile(key);
+//        readEncryptedStringFromFile(key);
+//    }
+
+    public static void writeEncryptedStringToFile(SecretKey key) {
+        try {
+            String password = "veryDifficultPassword";
+            String str = "Aquest és un missatge super secret";
+            String filePath = "files/ud4/fileencryption/prueba.txt";
+
+            // Cifra el string
+            String encryptedString = encrypt(key, str);
+            // Escribe el string cifrado a un archivo
+            Files.write(Paths.get(filePath), encryptedString.getBytes(StandardCharsets.UTF_8));
+            System.out.println("\nLos datos encriptados son: \n" + encryptedString);
+
+        } catch (Exception ex) {
+            System.err.println("Error escribiendo los datos cifrados en el archivo: " + ex);
+        }
+    }
+
+
+    public static String readEncryptedStringFromFile(SecretKey key) {
+        try {
+            String filePath = "files/ud4/fileencryption/prueba.txt";
+            // Lee los datos del archivo
+            byte[] encryptedData = Files.readAllBytes(Paths.get(filePath));
+            // Decodifica los datos en una cadena cifrada
+            String encryptedString = new String(encryptedData, StandardCharsets.UTF_8);
+            // Descifra la cadena cifrada
+            String decryptedString = decrypt(key, encryptedString);
+            System.out.println("Los datos desencriptados son: \n" + decryptedString);
+            return decryptedString;
+
+        } catch (Exception ex) {
+            System.err.println("Error leyendo y descifrando los datos del archivo: " + ex);
+        }
+        return null;
+    }
+
+
+
+//    public static String readEncryptedStringFromFile(SecretKey key) {
+//        try {
+//            String filePath = "files/ud4/fileencryption/prueba.txt";
+//            // Lee los datos del archivo
+//            byte[] encryptedData = Files.readAllBytes(Paths.get(filePath));
+//            // Decodifica los datos en una cadena cifrada
+//            String encryptedString = new String(encryptedData, StandardCharsets.UTF_8);
+//            // Descifra la cadena cifrada
+//            return decrypt(key, encryptedString);
+//
+//        } catch (Exception ex) {
+//            System.err.println("Error leyendo y descifrando los datos del archivo: " + ex);
+//        }
+//        return null;
+//    }
+
+
+////////////////////////////////////
+
+
+
+
+
+
     // Función para generar una clave SecretKey de AES
     public static SecretKey keygenKeyGeneration(int keySize) {
         SecretKey sKey = null;
@@ -151,11 +223,16 @@ public class ExamplesAES {
             // Cifrar el mensaje con la clave actual
             String encrypted = encrypt(key, message);
             System.out.printf("Encrypted message: %s\n", encrypted);
+
             // Descifrar el mensaje cifrado con la clave actual
             String decrypted = decrypt(key, encrypted);
             System.out.printf("Decrypted message: %s\n", decrypted);
             System.out.println();
         }
+
     }
+
+
+
 
 }
