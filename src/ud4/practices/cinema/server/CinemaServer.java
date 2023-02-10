@@ -4,15 +4,25 @@ import ud4.practices.cinema.models.Film;
 
 import javax.net.ssl.SSLServerSocketFactory;
 import javax.net.ssl.SSLSocket;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.security.KeyStore;
+import java.security.KeyStoreException;
+import java.security.NoSuchAlgorithmException;
+import java.security.cert.Certificate;
+import java.security.cert.CertificateException;
+import java.security.cert.X509Certificate;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Enumeration;
 import java.util.List;
-//keytool -genkey -keyalg RSA -alias cine-server -keypass CinemaServer -keystore cinema-server.jks -storepass password -validity 360 -keysize 2048
+//keytool -genkey -keyalg RSA -alias cinema-server -keypass CinemaServer -keystore cinema-server.jks -storepass password -validity 360 -keysize 2048
+
+//keytool -genkey -keyalg RSA -alias cinema-server -keystore cinema-server.jks -storepass password -validity 360 -keysize 2048
+
 /**
  * CinemaServer és un servidor TCP/IP que gestiona pel·lícules.
  * <p>
@@ -34,36 +44,85 @@ public class CinemaServer {
      * @throws IOException Excepcions del constructor ServerSocket
      */
     public CinemaServer(int port) throws Exception {
-        System.setProperty("javax.net.ssl.keyStore", "files/ud4/cine/cinema-server.jks");
+        System.setProperty("javax.net.ssl.keyStore", "files/ud4/cinema/cinema-server.jks");
         System.setProperty("javax.net.ssl.keyStorePassword", "password");
 
 
         SSLServerSocketFactory sslserversocketfactory = (SSLServerSocketFactory) SSLServerSocketFactory.getDefault();
         server = sslserversocketfactory.createServerSocket(port);
+        loadKeyStore("files/ud4/server_keystore.jks", "password");
 
-        printJKSData();
+//        printJKSData();
 
         //server = new ServerSocket(port);
         clients = new ArrayList<>();
         films = new ArrayList<>();
         running = true;
+
+
+
+
+        KeyStore keyStore = loadKeyStore("files/ud4/cinema/cinema-server.jks", "password");
+
+
+//        List<String> aliases = Collections.list(keyStore.aliases());
+//        for (String alias : aliases) {
+//            Certificate exampleCertificate = keyStore.getCertificate(alias);
+//            printCertificateInfo(exampleCertificate);
+//            System.out.println(" ");
+//        }
+
+
+
+        List<String> aliases = Collections.list(keyStore.aliases());
+        String alias = aliases.get(0);
+        Certificate exampleCertificate = keyStore.getCertificate(alias);
+
+        printCertificateInfo(exampleCertificate);
+
+
+        //printCertificateInfo(exampleCertificate);
+        //System.out.println("asdasd");
+        //System.out.println(exampleCertificate);
     }
 
-    public void printJKSData() throws Exception {
-        KeyStore keyStore = KeyStore.getInstance("JKS");
-        char[] password = "password".toCharArray();
-        try (FileInputStream inputStream = new FileInputStream("files/ud4/cine/cinema-server.jks")) {
-            keyStore.load(inputStream, password);
-            Enumeration<String> aliases = keyStore.aliases();
-            while (aliases.hasMoreElements()) {
-                String alias = aliases.nextElement();
-                System.out.println("Alias: " + alias);
-                System.out.println("Certificate: " + keyStore.getCertificate(alias));
-            }
+//    public void printJKSData() throws Exception {
+//        KeyStore keyStore = KeyStore.getInstance("JKS");
+//        char[] password = "password".toCharArray();
+//        try (FileInputStream inputStream = new FileInputStream("files/ud4/cine/cinema-server.jks")) {
+//            keyStore.load(inputStream, password);
+//            Enumeration<String> aliases = keyStore.aliases();
+//            while (aliases.hasMoreElements()) {
+//                String alias = aliases.nextElement();
+//                System.out.println("Alias: " + alias);
+//                System.out.println("Certificate: " + keyStore.getCertificate(alias));
+//            }
+//        }
+//    }
+
+    public static KeyStore loadKeyStore(String ksFile, String ksPwd) throws KeyStoreException, IOException, CertificateException, NoSuchAlgorithmException {
+        KeyStore ks = KeyStore.getInstance("JKS");
+        File f = new File (ksFile);
+        if (f.isFile()) {
+            FileInputStream in = new FileInputStream (f);
+            ks.load(in, ksPwd.toCharArray());
         }
+        return ks;
     }
 
-
+//    public static void printCertificateInfo(Certificate certificate){
+//        X509Certificate cert = (X509Certificate) certificate;
+//        String info = cert.getSubjectX500Principal().getName();
+//        System.out.println(info);
+//
+//    }
+public static void printCertificateInfo(Certificate certificate){
+    X509Certificate cert = (X509Certificate) certificate;
+    String[] info = cert.getSubjectX500Principal().getName().split(",");
+    for (String s : info) {
+        System.out.println(s);
+    }
+}
 
 
 
@@ -140,6 +199,8 @@ public class CinemaServer {
         try {
             CinemaServer server = new CinemaServer(1234);
             server.run();
+
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         } catch (Exception e) {

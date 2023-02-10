@@ -21,20 +21,6 @@ public class KeyStoreExample {
         }
         return ks;
     }
-//public static KeyStore loadKeyStore(String ksFile, String ksPwd) throws KeyStoreException, IOException, CertificateException, NoSuchAlgorithmException {
-//    KeyStore ks = KeyStore.getInstance("JKS");
-//    File f = new File (ksFile);
-//    if (f.isFile() && ksPwd != null) {
-//        FileInputStream in = new FileInputStream (f);
-//        ks.load(in, ksPwd.toCharArray());
-//    } else {
-//        // Aquí puedes retornar un valor específico o lanzar una excepción
-//        throw new IllegalArgumentException("La contraseña para el KeyStore no puede ser nula.");
-//    }
-//    return ks;
-//}
-
-
 
     public static void printCertificateInfo(Certificate certificate){
         X509Certificate cert = (X509Certificate) certificate;

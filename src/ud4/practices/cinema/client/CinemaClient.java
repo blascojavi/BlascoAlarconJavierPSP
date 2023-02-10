@@ -6,18 +6,23 @@ import ud4.practices.cinema.models.RequestType;
 
 import javax.net.ssl.SSLSocket;
 import javax.net.ssl.SSLSocketFactory;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
 import java.net.Socket;
 import java.security.KeyStore;
+import java.security.KeyStoreException;
+import java.security.NoSuchAlgorithmException;
+import java.security.cert.Certificate;
+import java.security.cert.CertificateException;
+import java.security.cert.X509Certificate;
+import java.util.Collections;
 import java.util.Enumeration;
+import java.util.List;
 import java.util.Scanner;
 
-//keytool -import -alias server -keystore client_truststore.jks -file server.crt -storepass 123456
-
-//keytool -genkey -keyalg RSA -alias cine-server -keypass CinemaServer -keystore cinema-server.jks -storepass password -validity 360 -keysize 2048
+//Exportar Certificado
+//keytool -export -alias cinema-server -keystore cinema-server.jks -file cinema-server.crt
+//Importar Certificados
+//keytool -import -alias cinema-server -keystore cinema-client.jks -file cinema-server.crt
 
 
 /**
@@ -56,28 +61,63 @@ public class CinemaClient {
         //this.socket = new Socket(host, port);
 
         String keyStorePassword = System.getenv("CinemaServer");
-        System.setProperty("javax.net.ssl.trustStore", "files/ud4/cine/cinema-client.jks");
+        System.setProperty("javax.net.ssl.trustStore", "files/ud4/cinema/cinema-client.jks");
         System.setProperty("javax.net.ssl.trustStorePassword", "password");
         SSLSocketFactory sslsocketfactory = (SSLSocketFactory) SSLSocketFactory.getDefault();
         this.socket = sslsocketfactory.createSocket(host, port);
-        printJKSData();
+       // printJKSData();
 
         this.objOut = new ObjectOutputStream(socket.getOutputStream());
         this.objIn = new ObjectInputStream(socket.getInputStream());
+
+
+        KeyStore keyStore = loadKeyStore("files/ud4/cinema/cinema-client.jks", "password");
+
+
+        List<String> aliases = Collections.list(keyStore.aliases());
+        String alias = aliases.get(0);
+        Certificate exampleCertificate = keyStore.getCertificate(alias);
+
+        printCertificateInfo(exampleCertificate);
+
     }
 
 
-    public void printJKSData() throws Exception {
-        KeyStore keyStore = KeyStore.getInstance("JKS");
-        char[] password = "password".toCharArray();
-        try (FileInputStream inputStream = new FileInputStream("files/ud4/cine/cinema-server.jks")) {
-            keyStore.load(inputStream, password);
-            Enumeration<String> aliases = keyStore.aliases();
-            while (aliases.hasMoreElements()) {
-                String alias = aliases.nextElement();
-                System.out.println("Alias: " + alias);
-                System.out.println("Certificate: " + keyStore.getCertificate(alias));
-            }
+//    public void printJKSData() throws Exception {
+//        KeyStore keyStore = KeyStore.getInstance("JKS");
+//        char[] password = "password".toCharArray();
+//        try (FileInputStream inputStream = new FileInputStream("files/ud4/cinema/cinema-server.jks")) {
+//            keyStore.load(inputStream, password);
+//            Enumeration<String> aliases = keyStore.aliases();
+//            while (aliases.hasMoreElements()) {
+//                String alias = aliases.nextElement();
+//                System.out.println("Alias: " + alias);
+//                System.out.println("Certificate: " + keyStore.getCertificate(alias));
+//            }
+//        }
+//    }
+
+public static KeyStore loadKeyStore(String ksFile, String ksPwd) throws KeyStoreException, IOException, CertificateException, NoSuchAlgorithmException {
+    KeyStore ks = KeyStore.getInstance("JKS");
+    File f = new File (ksFile);
+    if (f.isFile()) {
+        FileInputStream in = new FileInputStream (f);
+        ks.load(in, ksPwd.toCharArray());
+    }
+    return ks;
+}
+
+//    public static void printCertificateInfo(Certificate certificate){
+//        X509Certificate cert = (X509Certificate) certificate;
+//        String info = cert.getSubjectX500Principal().getName();
+//        System.out.println(info);
+//    }
+
+    public static void printCertificateInfo(Certificate certificate){
+        X509Certificate cert = (X509Certificate) certificate;
+        String[] info = cert.getSubjectX500Principal().getName().split(",");
+        for (String s : info) {
+            System.out.println(s);
         }
     }
 

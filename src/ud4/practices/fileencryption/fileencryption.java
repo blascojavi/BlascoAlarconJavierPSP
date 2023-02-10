@@ -19,10 +19,10 @@ import java.util.List;
 import java.util.Scanner;
 
 public class fileencryption {
-    static String path = "files/ud4/fileencryption/prueba.txt";
+
+
 
     public static void main(String[] args) throws IOException {
-
 
         Scanner sc = new Scanner(System.in);
         int opcion;
@@ -81,13 +81,23 @@ public class fileencryption {
 
     public static void escribirArchivo(SecretKey key) throws IOException {
 
+        String path = "files/ud4/fileencryption/prueba.txt";
+
+        System.out.print("Introduce la ruta del archivo (dejar en blanco para usar la ruta por defecto): ");
+
+        Scanner sc = new Scanner(System.in);
+        String userInput = sc.nextLine();
+        if (!userInput.isEmpty()) {
+            path = userInput;
+        }
+
         File archivo = new File(path);
 
 
         if (archivo.exists()) {
             System.out.print("El archivo ya existe, ¿desea sobreescribirlo? (S/N): \n");
-            Scanner sc = new Scanner(System.in);
-            String respuesta = sc.nextLine();
+            Scanner sc2 = new Scanner(System.in);
+            String respuesta = sc2.nextLine();
 
             if (!respuesta.equalsIgnoreCase("S")) {
                 System.out.println("El archivo no ha sido sobreescrito.\n");
@@ -99,18 +109,18 @@ public class fileencryption {
         }
 
         try {
-            Scanner sc = new Scanner(System.in);
+            Scanner sc3 = new Scanner(System.in);
 
             String str = "";
             String filePath = path;
 
             // System.out.print("Introduce el texto a cifrar: \n");
-            //str = sc.nextLine();
+            //str = sc3.nextLine();
 
 
             while (true) {
                 System.out.print("Introduce el texto a cifrar (escribir \\exit para salir): \n");
-                str = sc.nextLine();
+                str = sc3.nextLine();
                 if (str.equals("\\exit")) {
                     break;
                 }
@@ -138,6 +148,19 @@ public class fileencryption {
 
 
     public static void leerArchivo(SecretKey key) throws IOException {
+        //String path = "files/ud4/fileencryption/prueba.txt";
+
+        String path = "files/ud4/fileencryption/prueba.txt";
+
+        System.out.print("Introduce la ruta del archivo (dejar en blanco para usar la ruta por defecto): ");
+
+        Scanner sc = new Scanner(System.in);
+        String userInput = sc.nextLine();
+        if (!userInput.isEmpty()) {
+            path = userInput;
+        }
+
+
         File archivo = new File(path);
 
 
