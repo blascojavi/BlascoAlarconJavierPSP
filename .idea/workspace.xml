@@ -5,8 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7b0167b-1808-4529-b0b2-864c3ecfae9f" name="Changes" comment="PracticeCrypto">
+      <change afterPath="$PROJECT_DIR$/src/ud3/examples/create/CreateClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ud3/examples/create/CreateServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ud4/examples/AES.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ud4/exercises/sslchat/client/ChatClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ud4/exercises/sslchat/client/ChatListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ud4/exercises/sslchat/servidor/ChatServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ud4/exercises/sslchat/servidor/HandleClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ud4/exercises/symetricchat/client/ChatClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ud4/exercises/symetricchat/client/ChatListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ud4/exercises/symetricchat/servidor/ChatServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ud4/exercises/symetricchat/servidor/HandleClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ud4/practices/soluciones/cinema/client/CinemaClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ud4/practices/soluciones/cinema/models/Film.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ud4/practices/soluciones/cinema/models/Request.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ud4/practices/soluciones/cinema/models/RequestType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ud4/practices/soluciones/cinema/server/CinemaServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ud4/practices/soluciones/cinema/server/HandleClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ud4/practices/soluciones/fileencryption/AESFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ud4/practices/soluciones/fileencryption/FileEncryption.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ud4/practices/soluciones/fileencryption/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/ud4/fileencryption/prueba.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/ud4/fileencryption/prueba.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BlascoAlarconJavier-PSP/ud4/example.crt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BlascoAlarconJavier-PSP/ud4/imported.crt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BlascoAlarconJavier-PSP/ud4/keystore.jks" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,11 +84,11 @@
       <recent name="C:\Users\blasc\OneDrive\Javi\2 DAM\Procesos y servicios\UD1\BlascoAlarconJavier-PSP\files\ud3" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\blasc\OneDrive\Javi\2 DAM\Procesos y servicios\UD1\BlascoAlarconJavier-PSP\src\ud4\exercises\sslchat\client" />
       <recent name="C:\Users\blasc\OneDrive\Javi\2 DAM\Procesos y servicios\UD1\BlascoAlarconJavier-PSP\files\ud4" />
       <recent name="C:\Users\blasc\OneDrive\Javi\2 DAM\Procesos y servicios\UD1\BlascoAlarconJavier-PSP\files\ud3" />
       <recent name="C:\Users\blasc\OneDrive\Javi\2 DAM\Procesos y servicios\UD1\BlascoAlarconJavier-PSP\files" />
       <recent name="C:\Users\blasc\OneDrive\Javi\2 DAM\Procesos y servicios\UD1\BlascoAlarconJavier-PSP\src\ud3\exercises\chat\client" />
-      <recent name="C:\Users\blasc\OneDrive\Javi\2 DAM\Procesos y servicios\UD1\BlascoAlarconJavier-PSP\src\ud2\practices\tasks" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ud3.practices.lyrics.client" />
@@ -188,13 +210,6 @@
       <updated>1665157641341</updated>
       <workItem from="1669459243542" duration="323000" />
       <workItem from="1672267328061" duration="67000" />
-    </task>
-    <task id="LOCAL-00006" summary="significatiu">
-      <created>1665158527101</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1665158527101</updated>
     </task>
     <task id="LOCAL-00007" summary="significatiu">
       <created>1665844047988</created>
@@ -532,7 +547,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676030864279</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="PracticeCrypto">
+      <created>1676032147496</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1676032147496</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
