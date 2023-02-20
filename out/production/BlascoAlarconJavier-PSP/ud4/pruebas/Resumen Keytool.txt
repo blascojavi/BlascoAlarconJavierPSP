@@ -1,0 +1,96 @@
+
+Generar certificados KEYTOOL:
+                ===============================
+                          SERVIDOR
+                ===============================
+En KeyTool
+Para el servidor (En CMD): CREAMOS UNA KeyStore Y GENERAMOS UN CERTIFICADO PARA EL SERVIDOR
+(P.Ejemplo)
+            keytool -genkey -keyalg RSA -alias cinema-server -keystore cinema-server.jks -storepass password -validity 360 -keysize 2048
+
+Para crear el certificado del servidor, en la carpeta que queramos crearlo debemos de:
+    - arrancar cmd en esa carpeta
+    - poner la sentencia de arriba
+    - contestar a las preguntas:
+        .What is your first and last name?      [CN: CinemaServer]
+        .What is the name of your organizational unit?   [OU: PSP-DAM2S]
+        .What is the name of your organization?     [O: CIPFP Mislata]
+        .What is the name of your City or Locality?     [L: Mislata]
+        .What is the name of your State or Province?    [ ST: València]
+        .What is the two-letter country code for this unit?     [ CO: ES]
+        .Is "te da un resumen" correct?  [yes]
+
+    En el caso anterior, estas respuestas las he puesto dentro de [ ] porque cuando las pregunta hay que dar la respuesta
+        Certificat:
+        Alias: cinema-server
+        CN: CinemaServer
+        OU: PSP-DAM2S
+        O: CIPFP Mislata
+        L: Mislata
+        ST: València
+        CO: ES
+    Como vemos el Alias no entra dentro de las respuestas, se indica solo en la linea del CMD y dara nombre al archivo
+
+al ejecutar todos los pasos, se ha creado en la carpeta donde hemos lanzado el cmd el archivo cinema-server.jks, que es el que usaremos para las conexiones
+
+
+================
+EXPORTAR CERTIFICADO GENERADO DEL SERVIDOR A UN FICHERO
+================
+    - Para exportar el certificado al cliente debemos en la misma carpeta donde se encuentra el archivo servidor jks que queremos usar
+
+            keytool -export -alias cinema-server -keystore cinema-server.jks -file cinema-server.crt
+
+al lanzar en CMD esta sentencia nos pedira una contraseña del archivo, en este caso usaremos "password", ya que es la dada en la sentencia de la creacion del jks del servidor
+Se ha creado el archivo cinema-server.crt que es el nombre que le hemos dado al fina de la sentecia
+
+===============================
+            CLIENTE
+===============================
+
+================
+IMPORTAR CERTIFICADO DEL SERVIDOR A UNA TrustStore, QUE UTILIZARA EL CLIENTE
+================
+    - Ahora vamos a procedes a Importar los certificados
+
+        keytool -import -alias cinema-server -keystore cinema-client.jks -file cinema-server.crt
+
+    al lanzar en CMD esta sentencia no pedira la contraseña por duplicado en este caso "password"
+    nos preguntará si confiamos en el certificado : si
+
+
+
+Una vez tengamos todo, ya se puede operar con los certificados
+Los certificados tanto cliente como server se pueden ponener en una carpeta de la raiz, por ejemplo "files/ud4/cinema/cinema-client.jks"
+
+=============
+IMPRIMIR CERTIFICADOS
+=============
+Para imprimir los certificados podemos usar esta operativa:
+
+    - Añadimos este metodo al proyecto:
+
+public static void printCertificateInfo(Certificate certificate){
+        X509Certificate cert = (X509Certificate) certificate;
+        // Obtiene la información del sujeto del certificado y la muestra en pantalla.
+        String[] info = cert.getSubjectX500Principal().getName().split(",");
+        for (String s : info) {
+            System.out.println(s);
+        }
+    }
+
+en el metodo donde se llama al client o server, añadimos
+    declaramos en ese metodo
+
+    Certificate exampleCertificate = keyStore.getCertificate(alias);
+    printCertificateInfo(exampleCertificate);
+
+por ultimo
+
+ // Carga el almacén de claves del cliente y muestra información del certificado.
+        KeyStore keyStore = loadKeyStore("files/ud4/cinema/cinema-client.jks", "password");
+indicamos la ruta del archivo de claves y su password
+
+
+
+
