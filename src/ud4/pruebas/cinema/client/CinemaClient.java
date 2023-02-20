@@ -1,36 +1,20 @@
-package ud4.practices.cinema.client;
+package ud4.pruebas.cinema.client;
 
-import ud4.practices.cinema.models.Film;
-import ud4.practices.cinema.models.Request;
-import ud4.practices.cinema.models.RequestType;
+import ud4.pruebas.cinema.models.Film;
+import ud4.pruebas.cinema.models.Request;
+import ud4.pruebas.cinema.models.RequestType;
 
-import javax.net.ssl.SSLSocket;
-import javax.net.ssl.SSLSocketFactory;
-import java.io.*;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.net.Socket;
-import java.security.KeyStore;
-import java.security.KeyStoreException;
-import java.security.NoSuchAlgorithmException;
-import java.security.cert.Certificate;
-import java.security.cert.CertificateException;
-import java.security.cert.X509Certificate;
-import java.util.Collections;
-import java.util.Enumeration;
-import java.util.List;
 import java.util.Scanner;
-
-//Exportar Certificado
-//keytool -export -alias cinema-server -keystore cinema-server.jks -file cinema-server.crt
-//Importar Certificados
-//keytool -import -alias cinema-server -keystore cinema-client.jks -file cinema-server.crt
-
 
 /**
  * Client que es connecta a un CinemaServer
  * i permet realitzar les accions de afegir o obtenir
  * pel·lícules del servidor
  */
-
 public class CinemaClient {
     /**
      * Socket que permet connectar-se amb el servidor
@@ -56,82 +40,12 @@ public class CinemaClient {
      * @param port Port on escolta el servidor
      * @throws IOException Llançada si hi ha algun error connectant-se al servidor.
      */
-
-    //Este constructor se encarga de establecer la conexión con el servidor de cine mediante SSL y configurar los flujos de entrada y salida de objetos.
-    public CinemaClient(String host, int port) throws Exception {
+    public CinemaClient(String host, int port) throws IOException {
         this.scanner = new Scanner(System.in);
-        //this.socket = new Socket(host, port);
-
-        // Configura el almacén de claves para SSL y establece la conexión con el servidor de cine.
-        String keyStorePassword = System.getenv("CinemaServer");
-        System.setProperty("javax.net.ssl.trustStore", "files/ud4/cinema/cinema-client.jks");
-        System.setProperty("javax.net.ssl.trustStorePassword", "password");
-        SSLSocketFactory sslsocketfactory = (SSLSocketFactory) SSLSocketFactory.getDefault();
-        this.socket = sslsocketfactory.createSocket(host, port);
-       // printJKSData();
-
+        this.socket = new Socket(host, port);
         this.objOut = new ObjectOutputStream(socket.getOutputStream());
         this.objIn = new ObjectInputStream(socket.getInputStream());
-
-    // Carga el almacén de claves del cliente y muestra información del certificado.
-        KeyStore keyStore = loadKeyStore("files/ud4/cinema/cinema-client.jks", "password");
-
-
-        List<String> aliases = Collections.list(keyStore.aliases());
-        String alias = aliases.get(0);
-        Certificate exampleCertificate = keyStore.getCertificate(alias);
-
-        printCertificateInfo(exampleCertificate);
-
     }
-
-
-//    public void printJKSData() throws Exception {
-//        KeyStore keyStore = KeyStore.getInstance("JKS");
-//        char[] password = "password".toCharArray();
-//        try (FileInputStream inputStream = new FileInputStream("files/ud4/cinema/cinema-server.jks")) {
-//            keyStore.load(inputStream, password);
-//            Enumeration<String> aliases = keyStore.aliases();
-//            while (aliases.hasMoreElements()) {
-//                String alias = aliases.nextElement();
-//                System.out.println("Alias: " + alias);
-//                System.out.println("Certificate: " + keyStore.getCertificate(alias));
-//            }
-//        }
-//    }
-
-
-//Este método se encarga de cargar un almacén de claves.
-    public static KeyStore loadKeyStore(String ksFile, String ksPwd) throws KeyStoreException, IOException, CertificateException, NoSuchAlgorithmException {
-        // Crea una instancia de KeyStore con el tipo JKS.
-
-        KeyStore ks = KeyStore.getInstance("JKS");
-    File f = new File (ksFile);
-        // Si el archivo existe, lo carga en el almacén de claves.
-        if (f.isFile()) {
-        FileInputStream in = new FileInputStream (f);
-        ks.load(in, ksPwd.toCharArray());
-    }
-    return ks;
-}
-
-//    public static void printCertificateInfo(Certificate certificate){
-//        X509Certificate cert = (X509Certificate) certificate;
-//        String info = cert.getSubjectX500Principal().getName();
-//        System.out.println(info);
-//    }
-
-    //Este método se encarga de mostrar en pantalla la información de un certificado X.509
-    public static void printCertificateInfo(Certificate certificate){
-        X509Certificate cert = (X509Certificate) certificate;
-        // Obtiene la información del sujeto del certificado y la muestra en pantalla.
-        String[] info = cert.getSubjectX500Principal().getName().split(",");
-        for (String s : info) {
-            System.out.println(s);
-        }
-    }
-
-
 
     /**
      * Envia una pel·licula al servidor
@@ -139,8 +53,6 @@ public class CinemaClient {
      * @throws IOException Llançada si hi ha un error al enviar la pel·lícula o rebent una resposta
      * @throws ClassNotFoundException Llançada si l'objecte rebut pel servidor no és d'una classe coneguda.
      */
-
-    //Este método se encarga de enviar una película al servidor.
     private void sendFilm(Film f) throws IOException, ClassNotFoundException {
         // Creem una petició POST amb la pel·lícula
         Request req = new Request(RequestType.POST, f);
@@ -280,8 +192,6 @@ public class CinemaClient {
             cinema.menu();
         } catch (IOException e){
             System.err.println("Error connectant-se amb el servidor.");
-        } catch (Exception e) {
-            throw new RuntimeException(e);
         }
     }
 }

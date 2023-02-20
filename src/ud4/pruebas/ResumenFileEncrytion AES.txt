@@ -1,0 +1,223 @@
+Para escribir en un fichero hay que realizar varios pasos:
+    1- Generar la Key de cifrado
+    2- Escribir cifrando en el archivo
+    3- Leer el archivo cifrado
+
+
+Tenemos que tener el:
+ password: lo daremos nosotros o nos lo darán
+ SecretKey: generaremos el secretKey o la key con el password dado y el tamaño del keySize
+ password = "1234";
+ key = passwordKeyGeneration(password, 256);
+ ===
+            1 -       ASI CREAMOS LA KEY
+ ===
+ // Función para generar una clave SecretKey a partir de una contraseña
+     public static SecretKey passwordKeyGeneration(String password, int keySize) {
+         SecretKey sKey = null;
+         // Verifica si el tamaño de la clave es válido (128, 192 o 256 bits)
+         if ((keySize == 128) || (keySize == 192) || (keySize == 256)) {
+             try {
+                 // Convierte la contraseña en bytes en formato UTF-8
+                 byte[] data = password.getBytes(StandardCharsets.UTF_8);
+                 // Obtiene una instancia de MessageDigest para SHA-256
+                 MessageDigest md = MessageDigest.getInstance("SHA-256");
+                 // Realiza el hash de la contraseña
+                 byte[] hash = md.digest(data);
+                 // Toma los primeros keySize/8 bytes del hash como clave
+                 byte[] key = Arrays.copyOf(hash, keySize / 8);
+                 // Crea un objeto SecretKeySpec con la clave y el algoritmo AES
+                 sKey = new SecretKeySpec(key, "AES");
+             } catch (Exception ex) {
+                 System.err.println("Error generando la clave:" + ex);
+             }
+         }
+         // Devuelve la clave generada
+         return sKey;
+     }
+
+
+
+     ===
+                     2 -   UNA VEZ CREADA PASAMOS A ESCRIBIR EN EL ARCHIVO
+     ===
+
+         //Este método se encarga de escribir un archivo cifrado.
+         //Le pasamos la secretKey por parametros para cifrar la informacion
+
+         public static void escribirArchivo(SecretKey key) throws IOException {
+
+            //Le damos la ruta del archivo a escribir
+             String path = "files/ud4/fileencryption/prueba.txt";
+
+             // Solicita al usuario la ruta del archivo, si se deja en blanco se utiliza la ruta por defecto.
+             System.out.print("Introduce la ruta del archivo (dejar en blanco para usar la ruta por defecto): ");
+
+             Scanner sc = new Scanner(System.in);
+             String userInput = sc.nextLine();
+             if (!userInput.isEmpty()) {
+                 path = userInput;
+             }
+
+             File archivo = new File(path);
+
+             // Verifica si el archivo ya existe y pide confirmación para sobrescribirlo.
+             if (archivo.exists()) {
+                 System.out.print("El archivo ya existe, ¿desea sobreescribirlo? (S/N): \n");
+                 Scanner sc2 = new Scanner(System.in);
+                 String respuesta = sc2.nextLine();
+
+                 if (!respuesta.equalsIgnoreCase("S")) {
+                     System.out.println("El archivo no ha sido sobreescrito.\n");
+                     return;
+                 }
+             }
+             // Si el archivo no existe, lo crea.
+             if (!archivo.exists()) {
+                 archivo.createNewFile();
+             }
+
+             //Una vez que crea el archivo pasamos los datos a cifrar
+             try {
+                 Scanner sc3 = new Scanner(System.in);
+
+                 String str = "";
+                 String filePath = path;
+
+                 // System.out.print("Introduce el texto a cifrar: \n");
+                 //str = sc3.nextLine();
+
+                 // Pide al usuario el texto a cifrar y lo escribe en el archivo.
+                 while (true) {
+                     System.out.print("Introduce el texto a cifrar (escribir \\exit para salir): \n");
+                     str = sc3.nextLine();
+                     if (str.equals("\\exit")) {
+                         break;
+                     }
+
+                     // Cifra el string
+                     String encryptedString = encrypt(key, str);
+                     // Escribe el string cifrado a un archivo
+                     Files.write(Paths.get(filePath), (encryptedString + "\n").getBytes(StandardCharsets.UTF_8), StandardOpenOption.APPEND);
+                     System.out.println("\nLos datos encriptados son: \n" + encryptedString);
+                 }
+
+
+                 // Cifra el string
+                 //   String encryptedString = encrypt(key, str);
+                 // Escribe el string cifrado a un archivo
+                 // Files.write(Paths.get(filePath), encryptedString.getBytes(StandardCharsets.UTF_8));
+                 // System.out.println("\nLos datos encriptados son: \n" + encryptedString);
+
+             } catch (Exception ex) {
+                 System.err.println("Error escribiendo los datos cifrados en el archivo: " + ex);
+             }
+
+             System.out.println("El archivo se ha escrito con éxito.\n");
+         }
+
+
+         // Función para cifrar una cadena de texto utilizando AES
+         //PAra poder escribir el archivo cifrado usamos la funcion Encript
+            public static String encrypt(SecretKey key, String str) {
+                try {
+                    // Decodifica la cadena de texto UTF-8 a bytes y la cifra
+                    byte[] data = encrypt(key, str.getBytes(StandardCharsets.UTF_8));
+                    // Codifica los datos cifrados en base64
+                    return Base64.getEncoder().encodeToString(data);
+                } catch (Exception ex) {
+                    System.err.println("Error cifrando los datos: " + ex);
+                }
+                return null;
+            }
+
+
+    // Función para cifrar datos con AES
+    public static byte[] encrypt(SecretKey key, byte[] data) throws Exception {
+        return aes(key, data, Cipher.ENCRYPT_MODE);
+    }
+    // Función auxiliar para realizar cifrado/descifrado AES
+    private static byte[] aes(SecretKey key, byte[] data, int opmode) throws Exception {
+        // Crea un objeto Cipher con el algoritmo AES
+        Cipher cipher = Cipher.getInstance("AES");
+        // Inicializa el objeto Cipher con la clave y el modo de operación
+        cipher.init(opmode, key);
+        // Realiza el cifrado/descifrado
+        return cipher.doFinal(data);
+    }
+
+===
+            3 -       LEER EL ARCHIVO CIFRADO
+===
+Para leer el archivo cifrado se reutiliza parte del codigo de la escritura como
+    el metodo: - passwordKeyGeneration
+
+    Para la lectura se necesita e password (proporcionado por nosotros o nos lo dan por un scanner, etc.
+    con el password entregado generamos la secretKey
+    password = 1234
+        SecretKey key = passwordKeyGeneration(password, 256);
+        (reutilizamos el passwordKeyGeneration)
+
+
+     //Este método se encarga de leer un archivo cifrado y descifrar su contenido.
+
+         public static void leerArchivo(SecretKey key) throws IOException {
+             //Le damos la ruta del archivo
+             String path = "files/ud4/fileencryption/prueba.txt";
+
+     // Solicita al usuario la ruta del archivo, si se deja en blanco se utiliza la ruta por defecto.
+             System.out.print("Introduce la ruta del archivo (dejar en blanco para usar la ruta por defecto): ");
+
+             Scanner sc = new Scanner(System.in);
+             String userInput = sc.nextLine();
+             if (!userInput.isEmpty()) {
+                 path = userInput;
+             }
+
+
+             File archivo = new File(path);
+
+             // Si el archivo no existe, muestra un mensaje y sale del método.
+             if (!archivo.exists()) {
+                 System.out.print("El archivo no existe \n");
+                 return;
+
+             }
+            //UNA VEZ OBTENIDO LA RUTA DEL ARCHIVO PRUEBA A LEERLO
+             try {
+                 List<String> lineas = Files.readAllLines(Paths.get(path), StandardCharsets.UTF_8);
+                 System.out.println("Archivo leído con éxito, \nProcedemos a desencriptar las lineas si la contraseña es correcta");
+                 // Lee las líneas del archivo, las descifra y las muestra en pantalla.
+                 for (String linea : lineas) {
+                     if (linea != null) {
+                         String decryptedString = decrypt(key, linea);
+                         if (decryptedString != null) {//IMPRIME LINEA A LINEA
+                             System.out.println("Linea desencriptada: " + decryptedString);
+                         }
+                     }
+                 }
+
+             } catch (Exception ex) {
+                 System.err.println("Error descifrando los datos: " + ex);
+             }
+
+         }
+         //USAMOS LA FUNCION DECRYPT PARA DESENCRIPTAR EL TEXTO
+  // Función para descifrar una cadena de texto cifrada con AES
+    public static String decrypt(SecretKey key, String str) {
+        try {
+            // Decodifica la cadena cifrada en base64 a un byte[]
+            byte[] data = Base64.getDecoder().decode(str);
+            // Descifra los datos en byte[]
+            byte[] decrypted = decrypt(key, data);
+            // Codifica los datos descifrados en una cadena de texto
+            return new String(decrypted);
+        } catch (Exception ex) {
+            System.err.println("Error descifrando los datos: " + ex);
+        }
+        return null;
+    }
+      // Función para descifrar datos con AES
+        public static byte[] decrypt(SecretKey key, byte[] data) throws Exception {
+            return aes(key, data, Cipher.DECRYPT_MODE);
+        }

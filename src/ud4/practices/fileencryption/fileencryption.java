@@ -30,7 +30,8 @@ public class fileencryption {
         String password = "";
         SecretKey key = null;
 
-
+//Este código muestra un menú de opciones para realizar operaciones con archivos.
+//Se utiliza un bucle do-while para repetir el menú hasta que el usuario seleccione la opción "0" para salir.
         do {
             System.out.println("Bienvenido a FileEncryption: ");
             System.out.println("1) Escribir un archivo");
@@ -58,6 +59,8 @@ public class fileencryption {
         } while (opcion != 0);
     }
 
+    //Este método se encarga de solicitar al usuario una contraseña, generar una clave secreta a partir de ella y
+    // llamar al método escribirArchivo() para escribir un archivo cifrado.
     private static void opcion1() throws IOException {
         Scanner sc = new Scanner(System.in);
         String password = "";
@@ -67,6 +70,9 @@ public class fileencryption {
         key = passwordKeyGeneration(password, 256);
         escribirArchivo(key);
     }
+
+    //Este método se encarga de solicitar al usuario la contraseña utilizada para cifrar el archivo y llamar al método
+    // leerArchivo() para leer y mostrar en pantalla el contenido del archivo descifrado.
 
     private static void opcion2() throws IOException {
         Scanner sc = new Scanner(System.in);
@@ -79,10 +85,12 @@ public class fileencryption {
     }
 
 
+    //Este método se encarga de escribir un archivo cifrado.
     public static void escribirArchivo(SecretKey key) throws IOException {
 
         String path = "files/ud4/fileencryption/prueba.txt";
 
+        // Solicita al usuario la ruta del archivo, si se deja en blanco se utiliza la ruta por defecto.
         System.out.print("Introduce la ruta del archivo (dejar en blanco para usar la ruta por defecto): ");
 
         Scanner sc = new Scanner(System.in);
@@ -93,7 +101,7 @@ public class fileencryption {
 
         File archivo = new File(path);
 
-
+        // Verifica si el archivo ya existe y pide confirmación para sobrescribirlo.
         if (archivo.exists()) {
             System.out.print("El archivo ya existe, ¿desea sobreescribirlo? (S/N): \n");
             Scanner sc2 = new Scanner(System.in);
@@ -104,6 +112,7 @@ public class fileencryption {
                 return;
             }
         }
+        // Si el archivo no existe, lo crea.
         if (!archivo.exists()) {
             archivo.createNewFile();
         }
@@ -117,7 +126,7 @@ public class fileencryption {
             // System.out.print("Introduce el texto a cifrar: \n");
             //str = sc3.nextLine();
 
-
+            // Pide al usuario el texto a cifrar y lo escribe en el archivo.
             while (true) {
                 System.out.print("Introduce el texto a cifrar (escribir \\exit para salir): \n");
                 str = sc3.nextLine();
@@ -147,11 +156,13 @@ public class fileencryption {
     }
 
 
+//Este método se encarga de leer un archivo cifrado y descifrar su contenido.
+
     public static void leerArchivo(SecretKey key) throws IOException {
         //String path = "files/ud4/fileencryption/prueba.txt";
 
         String path = "files/ud4/fileencryption/prueba.txt";
-
+// Solicita al usuario la ruta del archivo, si se deja en blanco se utiliza la ruta por defecto.
         System.out.print("Introduce la ruta del archivo (dejar en blanco para usar la ruta por defecto): ");
 
         Scanner sc = new Scanner(System.in);
@@ -163,7 +174,7 @@ public class fileencryption {
 
         File archivo = new File(path);
 
-
+        // Si el archivo no existe, muestra un mensaje y sale del método.
         if (!archivo.exists()) {
             System.out.print("El archivo no existe \n");
             return;
@@ -173,6 +184,7 @@ public class fileencryption {
         try {
             List<String> lineas = Files.readAllLines(Paths.get(path), StandardCharsets.UTF_8);
             System.out.println("Archivo leído con éxito, \nProcedemos a desencriptar las lineas si la contraseña es correcta");
+            // Lee las líneas del archivo, las descifra y las muestra en pantalla.
             for (String linea : lineas) {
                 if (linea != null) {
                     String decryptedString = decrypt(key, linea);

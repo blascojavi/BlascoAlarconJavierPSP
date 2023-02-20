@@ -1,0 +1,56 @@
+Para cambiar los sockets por ServerSocket hay que cambiar el siguiente codigo, ademas de crear
+los archivos jks con el KeyTool:
+=======
+EN EL SERVIDOR
+=======
+Cambiamos:
+
+    // ServerSocket server = new ServerSocket( port);
+
+Por:
+//hay que recordar que hay que cambiar la ruta por la que toque
+ System.setProperty("javax.net.ssl.keyStore", "files/ud4/cinema/cinema-server.jks");
+ System.setProperty("javax.net.ssl.keyStorePassword", "password");
+ SSLServerSocketFactory sslserversocketfactory = (SSLServerSocketFactory) SSLServerSocketFactory.getDefault();
+
+ ServerSocket server = sslserversocketfactory.createServerSocket(port);
+
+
+
+=======
+EN EL CLIENTE
+=======
+
+Cambiamos
+//  Socket socket = new Socket("localhost", 1234);
+
+Por:
+
+//hay que recordar que hay que cambiar la ruta por la que toque
+System.setProperty("javax.net.ssl.trustStore", "files/ud4/cinema/cinema-client.jks");
+System.setProperty("javax.net.ssl.trustStorePassword", "password");
+
+SSLSocketFactory sslsocketfactory = (SSLSocketFactory) SSLSocketFactory.getDefault();
+//El Host o el Port se pueden asignar a variables, es recomendable
+Socket socket = sslsocketfactory.createSocket("localhost", 1234);
+
+
+=======
+EN MULTICLIENTES CON HANDLER
+=======
+
+=======
+EN EL SERVIDOR
+=======
+
+En el MultiClient
+        System.setProperty("javax.net.ssl.keyStore", "files/ud4/cinema/cinema-server.jks");
+        System.setProperty("javax.net.ssl.keyStorePassword", "password");
+        SSLServerSocketFactory sslserversocketfactory = (SSLServerSocketFactory) SSLServerSocketFactory.getDefault();
+        // Crear un SSLServerSocket
+        server = (SSLServerSocket) sslserversocketfactory.createServerSocket(port);
+
+
+En el Run
+
+                SSLSocket client = (SSLSocket) server.accept();

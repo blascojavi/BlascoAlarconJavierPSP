@@ -1,9 +1,13 @@
-package ud3.practices.lyrics.client;
+package ud3.pruebas.lyrics.client;
+
+import ud3.pruebas.lyrics.client.LyricsPlayer;
 
 import java.io.*;
 import java.net.Socket;
-import java.util.concurrent.ThreadLocalRandom;
 
+////Ahora lee de linea en linea desde un fichero de texto
+////Debemos hacer que se cnecte a un servidor en localhost en el puerto 1234
+////El cliente enviara mensajes del tipo GET i, donde i es el indice de la linea que quiere recibir
 public class Loader extends Thread {
     private LyricsPlayer lyricsPlayer;
     private String ip;
@@ -15,7 +19,15 @@ public class Loader extends Thread {
         this.lyricsPlayer = lyricsPlayer;//Instanciamos la clase lyticsPlayer
         this.ip = ip;
         this.port = port;
+
     }
+
+
+
+
+//    public Loader(ud3.pruebas.lyrics.client.LyricsPlayer lyricsPlayer, String ip, int port) {
+//
+//    }
 
     @Override
     public void run() {

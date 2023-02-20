@@ -19,6 +19,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Enumeration;
 import java.util.List;
+
 //keytool -genkey -keyalg RSA -alias cinema-server -keypass CinemaServer -keystore cinema-server.jks -storepass password -validity 360 -keysize 2048
 
 //keytool -genkey -keyalg RSA -alias cinema-server -keystore cinema-server.jks -storepass password -validity 360 -keysize 2048
