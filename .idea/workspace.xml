@@ -5,40 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7b0167b-1808-4529-b0b2-864c3ecfae9f" name="Changes" comment="Apuntes">
-      <change afterPath="$PROJECT_DIR$/src/ud3/pruebas/lyrics/client/Loader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud3/pruebas/lyrics/client/LyricsPlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud3/pruebas/lyrics/client/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud3/pruebas/lyrics/server/HandleClientLyrics.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud3/pruebas/lyrics/server/LyricsServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud3/pruebas/pruebasUD3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud4/pruebas/RSA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud4/pruebas/RSA_Prueba.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud4/pruebas/Resumen Keytool.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud4/pruebas/Resumen pasar socket a sslSocket" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud4/pruebas/ResumenFileEncrytion AES.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud4/pruebas/cinema/client/CinemaClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud4/pruebas/cinema/models/Film.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud4/pruebas/cinema/models/Request.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud4/pruebas/cinema/models/RequestType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud4/pruebas/cinema/server/CinemaServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud4/pruebas/cinema/server/HandleClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud4/pruebas/creacioSocketsSSL/CreateClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud4/pruebas/creacioSocketsSSL/CreateServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud4/pruebas/fileencryption/AESFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud4/pruebas/fileencryption/FileEncryption.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud4/pruebas/fileencryption/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud4/pruebas/multiClientSSL/client/MultiClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud4/pruebas/multiClientSSL/server/HandleClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud4/pruebas/multiClientSSL/server/MulticlientServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud4/pruebas/multiClientSSL/server/StartMulticlientServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/exam2/messaging-keystore.jks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/exam2/messaging-server.crt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/exam2/messaging-truststore.jks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exam2/client/MessagingClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exam2/client/MessagingClientListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exam2/models/Request.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exam2/models/RequestType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exam2/server/HandleClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exam2/server/MessagingServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/ud3/serverLog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/ud3/serverLog.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/ud4/fileencryption/prueba.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/ud4/fileencryption/prueba.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BlascoAlarconJavier-PSP/ud3/practices/lyrics/client/Loader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BlascoAlarconJavier-PSP/ud3/practices/lyrics/client/Loader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ud3/practices/lyrics/client/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ud3/practices/lyrics/client/Loader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ud4/practices/cinema/client/CinemaClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ud4/practices/cinema/client/CinemaClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ud4/practices/cinema/server/CinemaServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ud4/practices/cinema/server/CinemaServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ud4/practices/fileencryption/fileencryption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ud4/practices/fileencryption/fileencryption.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +49,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/blasc/OneDrive/Javi/2 DAM/Procesos y servicios/UD1/BlascoAlarconJavier-PSP/src/ud4/pruebas",
+    "last_opened_file_path": "C:/Users/blasc/OneDrive/Javi/2 DAM/Procesos y servicios/UD1/BlascoAlarconJavier-PSP/files/exam2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -89,53 +65,53 @@
       <recent name="ud4.examples" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\blasc\OneDrive\Javi\2 DAM\Procesos y servicios\UD1\BlascoAlarconJavier-PSP\files\exam2" />
       <recent name="C:\Users\blasc\OneDrive\Javi\2 DAM\Procesos y servicios\UD1\BlascoAlarconJavier-PSP\src\ud4\pruebas" />
       <recent name="C:\Users\blasc\OneDrive\Javi\2 DAM\Procesos y servicios\UD1\BlascoAlarconJavier-PSP\src\ud3\pruebas" />
       <recent name="C:\Users\blasc\OneDrive\Javi\2 DAM\Procesos y servicios\UD1\BlascoAlarconJavier-PSP\src\ud3\practices\lyrics" />
       <recent name="C:\Users\blasc\OneDrive\Javi\2 DAM\Procesos y servicios\UD1\BlascoAlarconJavier-PSP\src\ud3\practices\lyrics\lyrics\server" />
-      <recent name="C:\Users\blasc\OneDrive\Javi\2 DAM\Procesos y servicios\UD1\BlascoAlarconJavier-PSP\files\ud3" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\blasc\OneDrive\Javi\2 DAM\Procesos y servicios\UD1\BlascoAlarconJavier-PSP\src" />
       <recent name="C:\Users\blasc\OneDrive\Javi\2 DAM\Procesos y servicios\UD1\BlascoAlarconJavier-PSP\src\ud4\exercises\sslchat\client" />
       <recent name="C:\Users\blasc\OneDrive\Javi\2 DAM\Procesos y servicios\UD1\BlascoAlarconJavier-PSP\files\ud4" />
       <recent name="C:\Users\blasc\OneDrive\Javi\2 DAM\Procesos y servicios\UD1\BlascoAlarconJavier-PSP\files\ud3" />
       <recent name="C:\Users\blasc\OneDrive\Javi\2 DAM\Procesos y servicios\UD1\BlascoAlarconJavier-PSP\files" />
-      <recent name="C:\Users\blasc\OneDrive\Javi\2 DAM\Procesos y servicios\UD1\BlascoAlarconJavier-PSP\src\ud3\exercises\chat\client" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ud3.practices.lyrics.client" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RSA_Prueba">
-    <configuration name="FileEncryption" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ud4.pruebas.fileencryption.FileEncryption" />
-      <module name="BlascoAlarconJavier-PSP" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ud4.pruebas.fileencryption.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LyrycsServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ud3.practices.lyrics.server.LyrycsServer" />
-      <module name="BlascoAlarconJavier-PSP" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ud3.practices.lyrics.server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.MessagingClient">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="BlascoAlarconJavier-PSP" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MessagingClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="exam2.client.MessagingClient" />
+      <module name="BlascoAlarconJavier-PSP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="exam2.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MessagingServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="exam2.server.MessagingServer" />
+      <module name="BlascoAlarconJavier-PSP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="exam2.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -196,19 +172,19 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.RunProcessOutput" />
-      <item itemvalue="Application.FileEncryption" />
-      <item itemvalue="Application.LyrycsServer" />
+      <item itemvalue="Application.MessagingClient" />
+      <item itemvalue="Application.MessagingServer" />
       <item itemvalue="Application.RSA" />
       <item itemvalue="Application.RSA_Prueba" />
       <item itemvalue="Application.ud3.practices.lyrics.client.LyricsPlayer" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MessagingClient" />
+        <item itemvalue="Application.MessagingServer" />
         <item itemvalue="Application.RSA_Prueba" />
         <item itemvalue="Application.RSA" />
         <item itemvalue="Application.ud3.practices.lyrics.client.LyricsPlayer" />
-        <item itemvalue="Application.LyrycsServer" />
-        <item itemvalue="Application.FileEncryption" />
       </list>
     </recent_temporary>
   </component>
@@ -222,20 +198,6 @@
       <updated>1665157641341</updated>
       <workItem from="1669459243542" duration="323000" />
       <workItem from="1672267328061" duration="67000" />
-    </task>
-    <task id="LOCAL-00008" summary="significatiu">
-      <created>1665847081479</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1665847081479</updated>
-    </task>
-    <task id="LOCAL-00009" summary="significatiu">
-      <created>1665847088822</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1665847088822</updated>
     </task>
     <task id="LOCAL-00010" summary="significatiu">
       <created>1665847320325</created>
@@ -566,7 +528,21 @@
       <option name="project" value="LOCAL" />
       <updated>1676725700414</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Apuntes">
+      <created>1676931964317</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1676931964317</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Apuntes">
+      <created>1676932005991</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1676932005991</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
