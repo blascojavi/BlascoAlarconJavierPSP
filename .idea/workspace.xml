@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7b0167b-1808-4529-b0b2-864c3ecfae9f" name="Changes" comment="Exam2">
-      <change afterPath="$PROJECT_DIR$/src/ud4/Solucion/Examen2/client/MessagingClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud4/Solucion/Examen2/client/MessagingClientListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud4/Solucion/Examen2/models/Request.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud4/Solucion/Examen2/models/RequestType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud4/Solucion/Examen2/server/HandleClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ud4/Solucion/Examen2/server/MessagingServer.java" afterDir="false" />
+    <list default="true" id="c7b0167b-1808-4529-b0b2-864c3ecfae9f" name="Changes" comment="Prueba">
+      <change afterPath="$PROJECT_DIR$/files/ordinaria/handshake-keystore.jks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/ordinaria/handshake-server.crt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/ordinaria/handshake-truststore.jks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ordinaria/handshake/client/MessagingClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ordinaria/handshake/exceptions/CryptographyException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ordinaria/handshake/exceptions/HandshakeException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ordinaria/handshake/server/HandleClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ordinaria/handshake/server/MessagingServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/ud4/fileencryption/pruebaRSA.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/ud4/fileencryption/pruebaRSA.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,33 +42,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/blasc/OneDrive/Javi/2 DAM/Procesos y servicios/UD1/BlascoAlarconJavier-PSP/files/exam2&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/blasc/OneDrive/Javi/2 DAM/Procesos y servicios/UD1/BlascoAlarconJavier-PSP/src/ordinaria/handshake",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="ud4.examples" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\blasc\OneDrive\Javi\2 DAM\Procesos y servicios\UD1\BlascoAlarconJavier-PSP\src\ordinaria\handshake" />
       <recent name="C:\Users\blasc\OneDrive\Javi\2 DAM\Procesos y servicios\UD1\BlascoAlarconJavier-PSP\files\exam2" />
       <recent name="C:\Users\blasc\OneDrive\Javi\2 DAM\Procesos y servicios\UD1\BlascoAlarconJavier-PSP\src\ud4\pruebas" />
       <recent name="C:\Users\blasc\OneDrive\Javi\2 DAM\Procesos y servicios\UD1\BlascoAlarconJavier-PSP\src\ud3\pruebas" />
       <recent name="C:\Users\blasc\OneDrive\Javi\2 DAM\Procesos y servicios\UD1\BlascoAlarconJavier-PSP\src\ud3\practices\lyrics" />
-      <recent name="C:\Users\blasc\OneDrive\Javi\2 DAM\Procesos y servicios\UD1\BlascoAlarconJavier-PSP\src\ud3\practices\lyrics\lyrics\server" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\blasc\OneDrive\Javi\2 DAM\Procesos y servicios\UD1\BlascoAlarconJavier-PSP\src" />
@@ -80,7 +81,7 @@
       <recent name="ud3.practices.lyrics.client" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RSA_Prueba">
+  <component name="RunManager" selected="Application.MessagingClient">
     <configuration name="ExamplesAES" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ud4.examples.ExamplesAES" />
       <module name="BlascoAlarconJavier-PSP" />
@@ -110,6 +111,19 @@
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="BlascoAlarconJavier-PSP" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MessagingClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ordinaria.handshake.client.MessagingClient" />
+      <module name="BlascoAlarconJavier-PSP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ordinaria.handshake.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -154,35 +168,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ud4.Solucion.Examen2.server.MessagingServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ud4.Solucion.Examen2.server.MessagingServer" />
-      <module name="BlascoAlarconJavier-PSP" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ud4.Solucion.Examen2.server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.RunProcessOutput" />
+      <item itemvalue="Application.MessagingClient" />
       <item itemvalue="Application.RSA_Prueba" />
       <item itemvalue="Application.ExamplesAES" />
       <item itemvalue="Application.KeyStoreExample" />
       <item itemvalue="Application.ud4.Solucion.Examen2.client.MessagingClient" />
-      <item itemvalue="Application.ud4.Solucion.Examen2.server.MessagingServer" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MessagingClient" />
         <item itemvalue="Application.RSA_Prueba" />
         <item itemvalue="Application.ExamplesAES" />
         <item itemvalue="Application.KeyStoreExample" />
         <item itemvalue="Application.ud4.Solucion.Examen2.client.MessagingClient" />
-        <item itemvalue="Application.ud4.Solucion.Examen2.server.MessagingServer" />
       </list>
     </recent_temporary>
   </component>
@@ -196,13 +197,6 @@
       <updated>1665157641341</updated>
       <workItem from="1669459243542" duration="323000" />
       <workItem from="1672267328061" duration="67000" />
-    </task>
-    <task id="LOCAL-00012" summary="significatiu">
-      <created>1665848110580</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1665848110580</updated>
     </task>
     <task id="LOCAL-00013" summary="significatiu">
       <created>1665849721649</created>
@@ -540,7 +534,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676999273547</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="Prueba">
+      <created>1677691610367</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1677691610368</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -576,7 +577,8 @@
     <MESSAGE value="PracticeCrypto" />
     <MESSAGE value="Apuntes" />
     <MESSAGE value="Exam2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exam2" />
+    <MESSAGE value="Prueba" />
+    <option name="LAST_COMMIT_MESSAGE" value="Prueba" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
